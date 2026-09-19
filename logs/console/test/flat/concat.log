@@ -1,0 +1,77 @@
+$ python3 scripts/ulbc_v2/3.test/flat_policy_comparison.py --policy_type concat
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Loading weights for concat from: scripts/ulbc_v2/logs/models/concat.pth
+Terrain ID: 0
+Current Target Forward Velocity: 0.9248335957527161 m/s
+-3.557077290955931
+Episode 1 over!
+Current Target Forward Velocity: 0.5420428514480591 m/s
+-9.112362349173054
+Episode 2 over!
+Current Target Forward Velocity: 0.7008453011512756 m/s
+-4.15289209887851
+Episode 3 over!
+Current Target Forward Velocity: 0.8708723783493042 m/s
+-18.608366599306464
+Episode 4 over!
+Current Target Forward Velocity: 0.9412325620651245 m/s
+-2.206365116115194
+Episode 5 over!
+Current Target Forward Velocity: 0.5010324716567993 m/s
+-29626.904549684376
+Episode 6 over!
+Current Target Forward Velocity: 0.6621575355529785 m/s
+-5.642473218846135
+Episode 7 over!
+Current Target Forward Velocity: 0.5735703706741333 m/s
+-13.23436775348091
+Episode 8 over!
+Current Target Forward Velocity: 0.638857364654541 m/s
+-25.478691546111804
+Episode 9 over!
+Current Target Forward Velocity: 0.5868567824363708 m/s
+-7.1598860658705235
+Episode 10 over!
+Current Target Forward Velocity: 0.551694929599762 m/s
+-5.629796591354534
+Episode 11 over!
+Current Target Forward Velocity: 0.6080193519592285 m/s
+-3.138709775172174
+Episode 12 over!
+Current Target Forward Velocity: 0.7436802983283997 m/s
+-14.131406447981135
+Episode 13 over!
+Current Target Forward Velocity: 0.8917012214660645 m/s
+-6.8306393169405055
+Episode 14 over!
+Current Target Forward Velocity: 0.545382559299469 m/s
+-4.426961733144708
+Episode 15 over!
+Current Target Forward Velocity: 0.604080855846405 m/s
+-3.0124398085754365
+Episode 16 over!
+Current Target Forward Velocity: 0.9517329335212708 m/s
+-23.11735650713672
+Episode 17 over!
+Current Target Forward Velocity: 0.8973146080970764 m/s
+-25.7572879793006
+Episode 18 over!
+Current Target Forward Velocity: 0.7273464202880859 m/s
+-29.299033942748792
+Episode 19 over!
+Current Target Forward Velocity: 0.7671642899513245 m/s
+-6.477051418121846
+Episode 20 over!
+===============
+Unified on flat terrain - Policy: concat
+===============
+Length of episode:  [46, 37, 40, 39, 62, 133, 38, 234, 107, 100, 39, 39, 244, 104, 39, 39, 109, 78, 58, 94]
+Average length of episode:  83.95
+Number of episode:  20
+Per episode reward:  [-3.557077290955931, -9.112362349173054, -4.15289209887851, -18.608366599306464, -2.206365116115194, -29626.904549684376, -5.642473218846135, -13.23436775348091, -25.478691546111804, -7.1598860658705235, -5.629796591354534, -3.138709775172174, -14.131406447981135, -6.8306393169405055, -4.426961733144708, -3.0124398085754365, -23.11735650713672, -25.7572879793006, -29.299033942748792, -6.477051418121846]
+Average reward:  -1491.8938857621795
+Total reward:  -29837.87771524359 
+

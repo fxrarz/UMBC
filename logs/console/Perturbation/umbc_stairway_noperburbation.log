@@ -1,0 +1,341 @@
+$ python3 scripts/ulbc_v2/3.test/unified_stairway_perturbation.py --push_force 0 --push_interval 10 --push_duration 10
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Pushing default root body: pelvis (pass --push_body_name to target a different link)
+root height right after reset: 2.241696357727051
+[step 10] Applying push: 0.0 N at angle 352.7 deg
+[step 30] Applying push: 0.0 N at angle 355.6 deg
+[step 50] Applying push: 0.0 N at angle 61.9 deg
+[step 70] Applying push: 0.0 N at angle 356.3 deg
+[step 90] Applying push: 0.0 N at angle 80.2 deg
+[step 110] Applying push: 0.0 N at angle 326.8 deg
+[step 130] Applying push: 0.0 N at angle 313.5 deg
+[step 150] Applying push: 0.0 N at angle 122.6 deg
+[step 170] Applying push: 0.0 N at angle 25.5 deg
+[step 190] Applying push: 0.0 N at angle 209.1 deg
+[step 210] Applying push: 0.0 N at angle 129.3 deg
+[step 230] Applying push: 0.0 N at angle 152.0 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9202, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9156, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0113, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0131, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0063, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0256, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0038, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0014, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0124, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0250, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0299, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0058, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.06184534355998039, 'Metrics/base_velocity/error_vel_yaw': 0.06269191950559616, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 1 over! Fell: False
+[step 250] Applying push: 0.0 N at angle 346.7 deg
+[step 270] Applying push: 0.0 N at angle 184.3 deg
+[step 290] Applying push: 0.0 N at angle 243.4 deg
+[step 310] Applying push: 0.0 N at angle 63.5 deg
+[step 330] Applying push: 0.0 N at angle 207.7 deg
+[step 350] Applying push: 0.0 N at angle 279.9 deg
+[step 370] Applying push: 0.0 N at angle 170.0 deg
+[step 390] Applying push: 0.0 N at angle 170.9 deg
+[step 410] Applying push: 0.0 N at angle 264.2 deg
+[step 430] Applying push: 0.0 N at angle 249.5 deg
+[step 450] Applying push: 0.0 N at angle 346.6 deg
+[step 470] Applying push: 0.0 N at angle 103.3 deg
+[step 490] Applying push: 0.0 N at angle 357.6 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9353, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9210, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0094, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0107, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0051, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0203, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0040, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0026, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0175, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0208, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0248, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0053, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.05331495404243469, 'Metrics/base_velocity/error_vel_yaw': 0.056748099625110626, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 2 over! Fell: False
+[step 500] Applying push: 0.0 N at angle 40.0 deg
+[step 520] Applying push: 0.0 N at angle 301.8 deg
+[step 540] Applying push: 0.0 N at angle 157.9 deg
+[step 560] Applying push: 0.0 N at angle 47.3 deg
+[step 580] Applying push: 0.0 N at angle 110.3 deg
+[step 600] Applying push: 0.0 N at angle 85.4 deg
+[step 620] Applying push: 0.0 N at angle 16.0 deg
+[step 640] Applying push: 0.0 N at angle 358.6 deg
+[step 660] Applying push: 0.0 N at angle 88.5 deg
+[step 680] Applying push: 0.0 N at angle 30.6 deg
+[step 700] Applying push: 0.0 N at angle 118.4 deg
+[step 720] Applying push: 0.0 N at angle 289.1 deg
+[step 740] Applying push: 0.0 N at angle 314.7 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9423, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9233, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0085, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0082, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0037, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0176, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0055, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0003, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0144, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0182, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0236, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0046, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.04979424923658371, 'Metrics/base_velocity/error_vel_yaw': 0.053743768483400345, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 3 over! Fell: False
+[step 750] Applying push: 0.0 N at angle 157.7 deg
+[step 770] Applying push: 0.0 N at angle 82.5 deg
+[step 790] Applying push: 0.0 N at angle 123.2 deg
+[step 810] Applying push: 0.0 N at angle 205.9 deg
+[step 830] Applying push: 0.0 N at angle 38.1 deg
+[step 850] Applying push: 0.0 N at angle 39.9 deg
+[step 870] Applying push: 0.0 N at angle 255.4 deg
+[step 890] Applying push: 0.0 N at angle 200.6 deg
+[step 910] Applying push: 0.0 N at angle 144.0 deg
+[step 930] Applying push: 0.0 N at angle 162.7 deg
+[step 950] Applying push: 0.0 N at angle 312.2 deg
+[step 970] Applying push: 0.0 N at angle 198.5 deg
+[step 990] Applying push: 0.0 N at angle 224.3 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9455, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9419, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0091, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0102, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0039, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0210, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0037, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-4.4939e-05, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0131, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0187, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0230, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0048, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.04726980999112129, 'Metrics/base_velocity/error_vel_yaw': 0.04751378670334816, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 4 over! Fell: False
+[step 1000] Applying push: 0.0 N at angle 93.4 deg
+[step 1020] Applying push: 0.0 N at angle 59.2 deg
+[step 1040] Applying push: 0.0 N at angle 205.3 deg
+[step 1060] Applying push: 0.0 N at angle 189.7 deg
+[step 1080] Applying push: 0.0 N at angle 264.6 deg
+[step 1100] Applying push: 0.0 N at angle 307.3 deg
+[step 1120] Applying push: 0.0 N at angle 238.5 deg
+[step 1140] Applying push: 0.0 N at angle 38.9 deg
+[step 1160] Applying push: 0.0 N at angle 173.0 deg
+[step 1180] Applying push: 0.0 N at angle 74.2 deg
+[step 1200] Applying push: 0.0 N at angle 81.4 deg
+[step 1220] Applying push: 0.0 N at angle 25.2 deg
+[step 1240] Applying push: 0.0 N at angle 235.2 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9355, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9329, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0096, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0105, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0052, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0224, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0036, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0011, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0144, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0213, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0260, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0055, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.053858283907175064, 'Metrics/base_velocity/error_vel_yaw': 0.05023053288459778, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 5 over! Fell: False
+[step 1250] Applying push: 0.0 N at angle 278.9 deg
+[step 1270] Applying push: 0.0 N at angle 141.4 deg
+[step 1290] Applying push: 0.0 N at angle 110.9 deg
+[step 1310] Applying push: 0.0 N at angle 2.2 deg
+[step 1330] Applying push: 0.0 N at angle 345.6 deg
+[step 1350] Applying push: 0.0 N at angle 106.0 deg
+[step 1370] Applying push: 0.0 N at angle 169.8 deg
+[step 1390] Applying push: 0.0 N at angle 87.3 deg
+[step 1410] Applying push: 0.0 N at angle 159.1 deg
+[step 1430] Applying push: 0.0 N at angle 192.5 deg
+[step 1450] Applying push: 0.0 N at angle 91.9 deg
+[step 1470] Applying push: 0.0 N at angle 71.3 deg
+[step 1490] Applying push: 0.0 N at angle 244.1 deg
+root height right after reset: 2.241696357727051
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9439, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9576, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0080, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0140, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0042, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0198, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0032, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0004, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0166, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0177, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0232, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0047, device='cuda:0'), 'Curriculum/terrain_levels': 1.0, 'Metrics/base_velocity/error_vel_xy': 0.048218630254268646, 'Metrics/base_velocity/error_vel_yaw': 0.041472647339105606, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 6 over! Fell: False
+[step 1500] Applying push: 0.0 N at angle 136.0 deg
+[step 1520] Applying push: 0.0 N at angle 290.9 deg
+[step 1540] Applying push: 0.0 N at angle 181.9 deg
+[step 1560] Applying push: 0.0 N at angle 62.5 deg
+[step 1580] Applying push: 0.0 N at angle 20.1 deg
+[step 1600] Applying push: 0.0 N at angle 12.0 deg
+[step 1620] Applying push: 0.0 N at angle 305.3 deg
+[step 1640] Applying push: 0.0 N at angle 340.6 deg
+[step 1660] Applying push: 0.0 N at angle 35.3 deg
+[step 1680] Applying push: 0.0 N at angle 0.1 deg
+[step 1700] Applying push: 0.0 N at angle 122.3 deg
+[step 1720] Applying push: 0.0 N at angle 219.6 deg
+[step 1740] Applying push: 0.0 N at angle 182.9 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9332, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9024, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0113, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0146, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0075, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0245, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0022, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0021, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0238, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0268, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0300, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0059, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.057117268443107605, 'Metrics/base_velocity/error_vel_yaw': 0.06434457749128342, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 7 over! Fell: False
+[step 1750] Applying push: 0.0 N at angle 147.3 deg
+[step 1770] Applying push: 0.0 N at angle 220.7 deg
+[step 1790] Applying push: 0.0 N at angle 145.7 deg
+[step 1810] Applying push: 0.0 N at angle 295.0 deg
+[step 1830] Applying push: 0.0 N at angle 232.7 deg
+[step 1850] Applying push: 0.0 N at angle 257.4 deg
+[step 1870] Applying push: 0.0 N at angle 39.8 deg
+[step 1890] Applying push: 0.0 N at angle 148.0 deg
+[step 1910] Applying push: 0.0 N at angle 211.9 deg
+[step 1930] Applying push: 0.0 N at angle 15.7 deg
+[step 1950] Applying push: 0.0 N at angle 39.8 deg
+[step 1970] Applying push: 0.0 N at angle 177.1 deg
+[step 1990] Applying push: 0.0 N at angle 152.9 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9104, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.8128, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0117, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0112, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0070, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0212, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0052, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0059, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0153, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0300, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0323, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0071, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.067630335688591, 'Metrics/base_velocity/error_vel_yaw': 0.1010269969701767, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 8 over! Fell: False
+[step 2000] Applying push: 0.0 N at angle 276.2 deg
+[step 2020] Applying push: 0.0 N at angle 250.2 deg
+[step 2040] Applying push: 0.0 N at angle 239.3 deg
+[step 2060] Applying push: 0.0 N at angle 309.0 deg
+[step 2080] Applying push: 0.0 N at angle 335.1 deg
+[step 2100] Applying push: 0.0 N at angle 111.9 deg
+[step 2120] Applying push: 0.0 N at angle 344.9 deg
+[step 2140] Applying push: 0.0 N at angle 101.6 deg
+[step 2160] Applying push: 0.0 N at angle 133.8 deg
+[step 2180] Applying push: 0.0 N at angle 307.6 deg
+[step 2200] Applying push: 0.0 N at angle 122.1 deg
+[step 2220] Applying push: 0.0 N at angle 249.4 deg
+[step 2240] Applying push: 0.0 N at angle 32.2 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9259, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9056, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0102, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0117, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0072, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0218, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0035, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0025, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0184, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0241, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0305, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0066, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.06234756112098694, 'Metrics/base_velocity/error_vel_yaw': 0.06578618288040161, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 9 over! Fell: False
+[step 2250] Applying push: 0.0 N at angle 69.3 deg
+[step 2270] Applying push: 0.0 N at angle 359.5 deg
+[step 2290] Applying push: 0.0 N at angle 87.8 deg
+[step 2310] Applying push: 0.0 N at angle 355.9 deg
+[step 2330] Applying push: 0.0 N at angle 314.2 deg
+[step 2350] Applying push: 0.0 N at angle 244.0 deg
+[step 2370] Applying push: 0.0 N at angle 274.5 deg
+[step 2390] Applying push: 0.0 N at angle 131.1 deg
+[step 2410] Applying push: 0.0 N at angle 284.6 deg
+[step 2430] Applying push: 0.0 N at angle 68.1 deg
+[step 2450] Applying push: 0.0 N at angle 162.4 deg
+[step 2470] Applying push: 0.0 N at angle 84.1 deg
+[step 2490] Applying push: 0.0 N at angle 31.4 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9277, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.8818, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0082, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0078, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0043, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0165, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0067, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0057, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0159, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0211, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0270, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0053, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.05772757902741432, 'Metrics/base_velocity/error_vel_yaw': 0.06779545545578003, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 10 over! Fell: False
+[step 2500] Applying push: 0.0 N at angle 168.9 deg
+[step 2520] Applying push: 0.0 N at angle 345.1 deg
+[step 2540] Applying push: 0.0 N at angle 327.7 deg
+[step 2560] Applying push: 0.0 N at angle 359.7 deg
+[step 2580] Applying push: 0.0 N at angle 256.2 deg
+[step 2600] Applying push: 0.0 N at angle 109.8 deg
+[step 2620] Applying push: 0.0 N at angle 210.1 deg
+[step 2640] Applying push: 0.0 N at angle 90.6 deg
+[step 2660] Applying push: 0.0 N at angle 171.4 deg
+[step 2680] Applying push: 0.0 N at angle 207.1 deg
+[step 2700] Applying push: 0.0 N at angle 152.9 deg
+[step 2720] Applying push: 0.0 N at angle 54.5 deg
+[step 2740] Applying push: 0.0 N at angle 73.4 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9355, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9000, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0093, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0087, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0045, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0208, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0044, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0008, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0163, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0242, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0271, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0062, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.053324516862630844, 'Metrics/base_velocity/error_vel_yaw': 0.06321779638528824, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 11 over! Fell: False
+[step 2750] Applying push: 0.0 N at angle 121.2 deg
+[step 2770] Applying push: 0.0 N at angle 9.5 deg
+[step 2790] Applying push: 0.0 N at angle 67.2 deg
+[step 2810] Applying push: 0.0 N at angle 23.6 deg
+[step 2830] Applying push: 0.0 N at angle 168.2 deg
+[step 2850] Applying push: 0.0 N at angle 139.4 deg
+[step 2870] Applying push: 0.0 N at angle 87.4 deg
+[step 2890] Applying push: 0.0 N at angle 109.4 deg
+[step 2910] Applying push: 0.0 N at angle 39.0 deg
+[step 2930] Applying push: 0.0 N at angle 140.8 deg
+[step 2950] Applying push: 0.0 N at angle 86.3 deg
+[step 2970] Applying push: 0.0 N at angle 23.0 deg
+[step 2990] Applying push: 0.0 N at angle 346.8 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9441, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9549, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0082, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0110, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0038, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0204, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0034, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(0., device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0158, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0179, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0234, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0049, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.04908062517642975, 'Metrics/base_velocity/error_vel_yaw': 0.04159803315997124, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 12 over! Fell: False
+[step 3000] Applying push: 0.0 N at angle 92.4 deg
+[step 3020] Applying push: 0.0 N at angle 164.5 deg
+[step 3040] Applying push: 0.0 N at angle 72.6 deg
+[step 3060] Applying push: 0.0 N at angle 4.7 deg
+[step 3080] Applying push: 0.0 N at angle 289.0 deg
+[step 3100] Applying push: 0.0 N at angle 36.2 deg
+[step 3120] Applying push: 0.0 N at angle 184.3 deg
+[step 3140] Applying push: 0.0 N at angle 291.1 deg
+[step 3160] Applying push: 0.0 N at angle 309.5 deg
+[step 3180] Applying push: 0.0 N at angle 196.0 deg
+[step 3200] Applying push: 0.0 N at angle 3.3 deg
+[step 3220] Applying push: 0.0 N at angle 192.9 deg
+[step 3240] Applying push: 0.0 N at angle 236.6 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9394, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9554, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0096, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0092, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0052, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0219, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0023, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0018, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0141, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0209, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0252, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0053, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.051631275564432144, 'Metrics/base_velocity/error_vel_yaw': 0.04296476021409035, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 13 over! Fell: False
+[step 3250] Applying push: 0.0 N at angle 179.6 deg
+[step 3270] Applying push: 0.0 N at angle 341.9 deg
+[step 3290] Applying push: 0.0 N at angle 61.9 deg
+[step 3310] Applying push: 0.0 N at angle 333.3 deg
+[step 3330] Applying push: 0.0 N at angle 354.0 deg
+[step 3350] Applying push: 0.0 N at angle 35.1 deg
+[step 3370] Applying push: 0.0 N at angle 271.0 deg
+[step 3390] Applying push: 0.0 N at angle 223.7 deg
+[step 3410] Applying push: 0.0 N at angle 242.0 deg
+[step 3430] Applying push: 0.0 N at angle 266.8 deg
+[step 3450] Applying push: 0.0 N at angle 359.4 deg
+[step 3470] Applying push: 0.0 N at angle 203.5 deg
+[step 3490] Applying push: 0.0 N at angle 278.9 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9261, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.8928, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0101, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0106, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0055, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0205, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0057, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0020, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0184, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0227, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0286, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0053, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.05969615280628204, 'Metrics/base_velocity/error_vel_yaw': 0.06910735368728638, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 14 over! Fell: False
+[step 3500] Applying push: 0.0 N at angle 125.8 deg
+[step 3520] Applying push: 0.0 N at angle 277.5 deg
+[step 3540] Applying push: 0.0 N at angle 13.9 deg
+[step 3560] Applying push: 0.0 N at angle 83.7 deg
+[step 3580] Applying push: 0.0 N at angle 143.8 deg
+[step 3600] Applying push: 0.0 N at angle 210.1 deg
+[step 3620] Applying push: 0.0 N at angle 162.9 deg
+[step 3640] Applying push: 0.0 N at angle 91.7 deg
+[step 3660] Applying push: 0.0 N at angle 221.3 deg
+[step 3680] Applying push: 0.0 N at angle 162.4 deg
+[step 3700] Applying push: 0.0 N at angle 125.9 deg
+[step 3720] Applying push: 0.0 N at angle 290.5 deg
+[step 3740] Applying push: 0.0 N at angle 60.5 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9329, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9254, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0100, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0117, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0050, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0224, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0040, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0011, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0138, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0216, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0263, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0052, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.05464821681380272, 'Metrics/base_velocity/error_vel_yaw': 0.05471823364496231, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 15 over! Fell: False
+[step 3750] Applying push: 0.0 N at angle 63.7 deg
+[step 3770] Applying push: 0.0 N at angle 15.5 deg
+[step 3790] Applying push: 0.0 N at angle 209.4 deg
+[step 3810] Applying push: 0.0 N at angle 337.1 deg
+[step 3830] Applying push: 0.0 N at angle 320.6 deg
+[step 3850] Applying push: 0.0 N at angle 309.1 deg
+[step 3870] Applying push: 0.0 N at angle 77.5 deg
+[step 3890] Applying push: 0.0 N at angle 37.6 deg
+[step 3910] Applying push: 0.0 N at angle 324.7 deg
+[step 3930] Applying push: 0.0 N at angle 342.5 deg
+[step 3950] Applying push: 0.0 N at angle 14.4 deg
+[step 3970] Applying push: 0.0 N at angle 281.9 deg
+[step 3990] Applying push: 0.0 N at angle 50.4 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9294, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9330, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0090, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0184, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0058, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0209, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0037, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0024, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0157, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0214, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0282, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0056, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.055511657148599625, 'Metrics/base_velocity/error_vel_yaw': 0.05306745693087578, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 16 over! Fell: False
+[step 4000] Applying push: 0.0 N at angle 330.3 deg
+[step 4020] Applying push: 0.0 N at angle 86.9 deg
+[step 4040] Applying push: 0.0 N at angle 87.2 deg
+[step 4060] Applying push: 0.0 N at angle 157.3 deg
+[step 4080] Applying push: 0.0 N at angle 26.6 deg
+[step 4100] Applying push: 0.0 N at angle 175.8 deg
+[step 4120] Applying push: 0.0 N at angle 145.1 deg
+[step 4140] Applying push: 0.0 N at angle 181.1 deg
+[step 4160] Applying push: 0.0 N at angle 91.9 deg
+[step 4180] Applying push: 0.0 N at angle 187.7 deg
+[step 4200] Applying push: 0.0 N at angle 296.3 deg
+[step 4220] Applying push: 0.0 N at angle 152.8 deg
+[step 4240] Applying push: 0.0 N at angle 164.0 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9242, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9023, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0099, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0164, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0061, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0188, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0041, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0025, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0185, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0219, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0280, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0058, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.060955218970775604, 'Metrics/base_velocity/error_vel_yaw': 0.06823370605707169, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 17 over! Fell: False
+[step 4250] Applying push: 0.0 N at angle 267.5 deg
+[step 4270] Applying push: 0.0 N at angle 308.1 deg
+[step 4290] Applying push: 0.0 N at angle 77.8 deg
+[step 4310] Applying push: 0.0 N at angle 306.2 deg
+[step 4330] Applying push: 0.0 N at angle 133.8 deg
+[step 4350] Applying push: 0.0 N at angle 188.3 deg
+[step 4370] Applying push: 0.0 N at angle 128.5 deg
+[step 4390] Applying push: 0.0 N at angle 341.8 deg
+[step 4410] Applying push: 0.0 N at angle 96.6 deg
+[step 4430] Applying push: 0.0 N at angle 178.8 deg
+[step 4450] Applying push: 0.0 N at angle 251.1 deg
+[step 4470] Applying push: 0.0 N at angle 55.5 deg
+[step 4490] Applying push: 0.0 N at angle 158.5 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9159, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.8741, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0118, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0149, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0072, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0240, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0033, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0026, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0177, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0287, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0322, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0063, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.0655764639377594, 'Metrics/base_velocity/error_vel_yaw': 0.07874448597431183, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 18 over! Fell: False
+[step 4500] Applying push: 0.0 N at angle 39.0 deg
+[step 4520] Applying push: 0.0 N at angle 4.9 deg
+[step 4540] Applying push: 0.0 N at angle 238.7 deg
+[step 4560] Applying push: 0.0 N at angle 340.4 deg
+[step 4580] Applying push: 0.0 N at angle 27.6 deg
+[step 4600] Applying push: 0.0 N at angle 233.4 deg
+[step 4620] Applying push: 0.0 N at angle 342.8 deg
+[step 4640] Applying push: 0.0 N at angle 64.5 deg
+[step 4660] Applying push: 0.0 N at angle 89.4 deg
+[step 4680] Applying push: 0.0 N at angle 296.8 deg
+[step 4700] Applying push: 0.0 N at angle 326.7 deg
+[step 4720] Applying push: 0.0 N at angle 357.9 deg
+[step 4740] Applying push: 0.0 N at angle 255.2 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9296, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.8928, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0100, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0148, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0046, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0207, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0055, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0031, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0192, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0247, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0284, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0063, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.055235132575035095, 'Metrics/base_velocity/error_vel_yaw': 0.06745771318674088, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 19 over! Fell: False
+[step 4750] Applying push: 0.0 N at angle 194.8 deg
+[step 4770] Applying push: 0.0 N at angle 85.8 deg
+[step 4790] Applying push: 0.0 N at angle 5.4 deg
+[step 4810] Applying push: 0.0 N at angle 239.1 deg
+[step 4830] Applying push: 0.0 N at angle 335.4 deg
+[step 4850] Applying push: 0.0 N at angle 27.8 deg
+[step 4870] Applying push: 0.0 N at angle 52.9 deg
+[step 4890] Applying push: 0.0 N at angle 311.7 deg
+[step 4910] Applying push: 0.0 N at angle 96.3 deg
+[step 4930] Applying push: 0.0 N at angle 119.8 deg
+[step 4950] Applying push: 0.0 N at angle 129.8 deg
+[step 4970] Applying push: 0.0 N at angle 164.8 deg
+[step 4990] Applying push: 0.0 N at angle 170.9 deg
+root height right after reset: 2.5214619636535645
+termination log: {'Episode_Reward/track_lin_vel_xy_exp': tensor(0.9235, device='cuda:0'), 'Episode_Reward/track_ang_vel_z_exp': tensor(0.9094, device='cuda:0'), 'Episode_Reward/ang_vel_xy_l2': tensor(-0.0099, device='cuda:0'), 'Episode_Reward/dof_torques_l2': tensor(0., device='cuda:0'), 'Episode_Reward/dof_acc_l2': tensor(-0.0090, device='cuda:0'), 'Episode_Reward/action_rate_l2': tensor(-0.0052, device='cuda:0'), 'Episode_Reward/feet_air_time': tensor(0.0219, device='cuda:0'), 'Episode_Reward/flat_orientation_l2': tensor(-0.0047, device='cuda:0'), 'Episode_Reward/dof_pos_limits': tensor(-0.0019, device='cuda:0'), 'Episode_Reward/termination_penalty': tensor(0., device='cuda:0'), 'Episode_Reward/feet_slide': tensor(-0.0140, device='cuda:0'), 'Episode_Reward/joint_deviation_hip': tensor(-0.0251, device='cuda:0'), 'Episode_Reward/joint_deviation_arms': tensor(-0.0287, device='cuda:0'), 'Episode_Reward/joint_deviation_torso': tensor(-0.0059, device='cuda:0'), 'Curriculum/terrain_levels': 2.0, 'Metrics/base_velocity/error_vel_xy': 0.05942581593990326, 'Metrics/base_velocity/error_vel_yaw': 0.06188385188579559, 'Episode_Termination/time_out': 1, 'Episode_Termination/base_contact': 0}
+Episode 20 over! Fell: False
+===============
+UMBC Stairway Terrain under perturbation
+===============
+Push force (N):  0.0
+Push interval (steps):  10
+Push duration (steps):  10
+Number of episodes:  20
+Fall count:  0
+Fall rate:  0.0
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Per episode reward:  [8.723932941502426, 8.84520505554974, 8.944707995280623, 9.07272386457771, 8.932133972644806, 9.10844743438065, 8.653637871611863, 8.057155370159307, 8.656255593057722, 8.583469261415303, 8.743244776502252, 9.120506521780044, 9.077620237134397, 8.622539478586987, 8.872157939011231, 8.82961112447083, 8.635583851952106, 8.417720914818347, 8.59691596229095, 8.720930491574109]
+Average reward:  8.76072503291507
+Total reward:  175.2145006583014 
+

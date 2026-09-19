@@ -1,0 +1,733 @@
+$ python3 scripts/ulbc_v2/2.train/umbc_seed.py 
+Using device: cuda
+
+================================================================================
+RUNNING TRAINING PIPELINE FOR SEED: 42
+================================================================================
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001877 | Val Loss: 0.000925 | Val MAE: 0.028747 | Val RMSE: 0.043010
+   >> [DIAGNOSTIC] flat: 0.000401 | stairway: 0.001187
+Epoch 2/60 | Train Loss: 0.001138 | Val Loss: 0.000853 | Val MAE: 0.027768 | Val RMSE: 0.041295
+   >> [DIAGNOSTIC] flat: 0.000499 | stairway: 0.001029
+Epoch 3/60 | Train Loss: 0.001014 | Val Loss: 0.000682 | Val MAE: 0.024868 | Val RMSE: 0.036924
+   >> [DIAGNOSTIC] flat: 0.000359 | stairway: 0.000843
+Epoch 4/60 | Train Loss: 0.000947 | Val Loss: 0.000661 | Val MAE: 0.024695 | Val RMSE: 0.036365
+   >> [DIAGNOSTIC] flat: 0.000325 | stairway: 0.000829
+Epoch 5/60 | Train Loss: 0.000948 | Val Loss: 0.000739 | Val MAE: 0.025996 | Val RMSE: 0.038445
+   >> [DIAGNOSTIC] flat: 0.000382 | stairway: 0.000917
+Epoch 6/60 | Train Loss: 0.000944 | Val Loss: 0.000681 | Val MAE: 0.024908 | Val RMSE: 0.036905
+   >> [DIAGNOSTIC] flat: 0.000321 | stairway: 0.000861
+Epoch 7/60 | Train Loss: 0.000886 | Val Loss: 0.000732 | Val MAE: 0.025855 | Val RMSE: 0.038274
+   >> [DIAGNOSTIC] flat: 0.000375 | stairway: 0.000911
+Epoch 8/60 | Train Loss: 0.000872 | Val Loss: 0.000662 | Val MAE: 0.024849 | Val RMSE: 0.036374
+   >> [DIAGNOSTIC] flat: 0.000313 | stairway: 0.000836
+Epoch 9/60 | Train Loss: 0.000854 | Val Loss: 0.000690 | Val MAE: 0.025214 | Val RMSE: 0.037142
+   >> [DIAGNOSTIC] flat: 0.000324 | stairway: 0.000873
+Epoch 10/60 | Train Loss: 0.000850 | Val Loss: 0.000614 | Val MAE: 0.024092 | Val RMSE: 0.035040
+   >> [DIAGNOSTIC] flat: 0.000287 | stairway: 0.000777
+Epoch 11/60 | Train Loss: 0.000830 | Val Loss: 0.000663 | Val MAE: 0.024645 | Val RMSE: 0.036422
+   >> [DIAGNOSTIC] flat: 0.000273 | stairway: 0.000858
+Epoch 12/60 | Train Loss: 0.000826 | Val Loss: 0.000624 | Val MAE: 0.024298 | Val RMSE: 0.035335
+   >> [DIAGNOSTIC] flat: 0.000278 | stairway: 0.000797
+Epoch 13/60 | Train Loss: 0.000848 | Val Loss: 0.000605 | Val MAE: 0.023706 | Val RMSE: 0.034778
+   >> [DIAGNOSTIC] flat: 0.000281 | stairway: 0.000767
+Epoch 14/60 | Train Loss: 0.000824 | Val Loss: 0.000601 | Val MAE: 0.023644 | Val RMSE: 0.034680
+   >> [DIAGNOSTIC] flat: 0.000278 | stairway: 0.000763
+Epoch 15/60 | Train Loss: 0.000811 | Val Loss: 0.000658 | Val MAE: 0.024626 | Val RMSE: 0.036269
+   >> [DIAGNOSTIC] flat: 0.000285 | stairway: 0.000844
+Epoch 16/60 | Train Loss: 0.000809 | Val Loss: 0.000627 | Val MAE: 0.024015 | Val RMSE: 0.035410
+   >> [DIAGNOSTIC] flat: 0.000263 | stairway: 0.000809
+Epoch 17/60 | Train Loss: 0.000800 | Val Loss: 0.000620 | Val MAE: 0.024067 | Val RMSE: 0.035208
+   >> [DIAGNOSTIC] flat: 0.000296 | stairway: 0.000782
+Epoch 18/60 | Train Loss: 0.000798 | Val Loss: 0.000593 | Val MAE: 0.023231 | Val RMSE: 0.034437
+   >> [DIAGNOSTIC] flat: 0.000270 | stairway: 0.000754
+Epoch 19/60 | Train Loss: 0.000807 | Val Loss: 0.000630 | Val MAE: 0.024494 | Val RMSE: 0.035483
+   >> [DIAGNOSTIC] flat: 0.000299 | stairway: 0.000795
+Epoch 20/60 | Train Loss: 0.000818 | Val Loss: 0.000598 | Val MAE: 0.023530 | Val RMSE: 0.034581
+   >> [DIAGNOSTIC] flat: 0.000285 | stairway: 0.000754
+Epoch 21/60 | Train Loss: 0.000796 | Val Loss: 0.000643 | Val MAE: 0.024399 | Val RMSE: 0.035863
+   >> [DIAGNOSTIC] flat: 0.000316 | stairway: 0.000806
+Epoch 22/60 | Train Loss: 0.000798 | Val Loss: 0.000577 | Val MAE: 0.023069 | Val RMSE: 0.033972
+   >> [DIAGNOSTIC] flat: 0.000278 | stairway: 0.000727
+Epoch 23/60 | Train Loss: 0.000792 | Val Loss: 0.000824 | Val MAE: 0.027752 | Val RMSE: 0.040586
+   >> [DIAGNOSTIC] flat: 0.000430 | stairway: 0.001020
+Epoch 24/60 | Train Loss: 0.000798 | Val Loss: 0.000598 | Val MAE: 0.023690 | Val RMSE: 0.034578
+   >> [DIAGNOSTIC] flat: 0.000276 | stairway: 0.000759
+Epoch 25/60 | Train Loss: 0.000793 | Val Loss: 0.000746 | Val MAE: 0.026468 | Val RMSE: 0.038632
+   >> [DIAGNOSTIC] flat: 0.000371 | stairway: 0.000934
+Epoch 26/60 | Train Loss: 0.000800 | Val Loss: 0.000602 | Val MAE: 0.023236 | Val RMSE: 0.034697
+   >> [DIAGNOSTIC] flat: 0.000265 | stairway: 0.000770
+Epoch 27/60 | Train Loss: 0.000793 | Val Loss: 0.000739 | Val MAE: 0.026281 | Val RMSE: 0.038457
+   >> [DIAGNOSTIC] flat: 0.000338 | stairway: 0.000940
+Epoch 28/60 | Train Loss: 0.000793 | Val Loss: 0.000747 | Val MAE: 0.025771 | Val RMSE: 0.038668
+   >> [DIAGNOSTIC] flat: 0.000316 | stairway: 0.000963
+Epoch 29/60 | Train Loss: 0.000480 | Val Loss: 0.000396 | Val MAE: 0.018626 | Val RMSE: 0.028153
+   >> [DIAGNOSTIC] flat: 0.000159 | stairway: 0.000515
+Epoch 30/60 | Train Loss: 0.000462 | Val Loss: 0.000367 | Val MAE: 0.017841 | Val RMSE: 0.027093
+   >> [DIAGNOSTIC] flat: 0.000141 | stairway: 0.000480
+Epoch 31/60 | Train Loss: 0.000452 | Val Loss: 0.000376 | Val MAE: 0.018238 | Val RMSE: 0.027417
+   >> [DIAGNOSTIC] flat: 0.000147 | stairway: 0.000490
+Epoch 32/60 | Train Loss: 0.000449 | Val Loss: 0.000393 | Val MAE: 0.018839 | Val RMSE: 0.028037
+   >> [DIAGNOSTIC] flat: 0.000161 | stairway: 0.000509
+Epoch 33/60 | Train Loss: 0.000447 | Val Loss: 0.000359 | Val MAE: 0.017702 | Val RMSE: 0.026804
+   >> [DIAGNOSTIC] flat: 0.000134 | stairway: 0.000472
+Epoch 34/60 | Train Loss: 0.000441 | Val Loss: 0.000378 | Val MAE: 0.018238 | Val RMSE: 0.027498
+   >> [DIAGNOSTIC] flat: 0.000145 | stairway: 0.000495
+Epoch 35/60 | Train Loss: 0.000443 | Val Loss: 0.000408 | Val MAE: 0.018861 | Val RMSE: 0.028572
+   >> [DIAGNOSTIC] flat: 0.000155 | stairway: 0.000535
+Epoch 36/60 | Train Loss: 0.000440 | Val Loss: 0.000371 | Val MAE: 0.017988 | Val RMSE: 0.027234
+   >> [DIAGNOSTIC] flat: 0.000141 | stairway: 0.000486
+Epoch 37/60 | Train Loss: 0.000439 | Val Loss: 0.000366 | Val MAE: 0.017951 | Val RMSE: 0.027049
+   >> [DIAGNOSTIC] flat: 0.000134 | stairway: 0.000482
+Epoch 38/60 | Train Loss: 0.000433 | Val Loss: 0.000376 | Val MAE: 0.018193 | Val RMSE: 0.027440
+   >> [DIAGNOSTIC] flat: 0.000146 | stairway: 0.000492
+Early stopping at epoch 38 (no improvement for 8 epochs). Best val loss: 0.000367
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.017841 | Overall RMSE: 0.027093
+   motor_1     MAE: 0.012471   RMSE: 0.017027
+   motor_2     MAE: 0.010858   RMSE: 0.015631
+   motor_3     MAE: 0.012135   RMSE: 0.017154
+   motor_4     MAE: 0.014130   RMSE: 0.020396
+   motor_5     MAE: 0.014598   RMSE: 0.021026
+   motor_6     MAE: 0.016719   RMSE: 0.024024
+   motor_7     MAE: 0.018304   RMSE: 0.026309
+   motor_8     MAE: 0.014710   RMSE: 0.021913
+   motor_9     MAE: 0.015057   RMSE: 0.021666
+   motor_10    MAE: 0.018908   RMSE: 0.027437
+   motor_11    MAE: 0.016887   RMSE: 0.024583
+   motor_12    MAE: 0.023264   RMSE: 0.033755
+   motor_13    MAE: 0.021723   RMSE: 0.032525
+   motor_14    MAE: 0.016545   RMSE: 0.024130
+   motor_15    MAE: 0.018263   RMSE: 0.026746
+   motor_16    MAE: 0.031822   RMSE: 0.046764
+   motor_17    MAE: 0.028045   RMSE: 0.042175
+   motor_18    MAE: 0.017327   RMSE: 0.025052
+   motor_19    MAE: 0.017212   RMSE: 0.024408
+   [flat]  MAE: 0.011674   RMSE: 0.016793   (n=50000)
+   [stairway]  MAE: 0.020924   RMSE: 0.030984   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/umbc_seed_42_history.pkl
+training_time_sec:  576.8753507137299
+
+================================================================================
+RUNNING TRAINING PIPELINE FOR SEED: 123
+================================================================================
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001756 | Val Loss: 0.000801 | Val MAE: 0.024336 | Val RMSE: 0.041216
+   >> [DIAGNOSTIC] flat: 0.000266 | stairway: 0.001068
+Epoch 2/60 | Train Loss: 0.001031 | Val Loss: 0.000768 | Val MAE: 0.024169 | Val RMSE: 0.039821
+   >> [DIAGNOSTIC] flat: 0.000249 | stairway: 0.001027
+Epoch 3/60 | Train Loss: 0.000941 | Val Loss: 0.000711 | Val MAE: 0.023415 | Val RMSE: 0.038968
+   >> [DIAGNOSTIC] flat: 0.000254 | stairway: 0.000939
+Epoch 4/60 | Train Loss: 0.000878 | Val Loss: 0.000691 | Val MAE: 0.023186 | Val RMSE: 0.037934
+   >> [DIAGNOSTIC] flat: 0.000231 | stairway: 0.000922
+Epoch 5/60 | Train Loss: 0.000852 | Val Loss: 0.000692 | Val MAE: 0.023092 | Val RMSE: 0.038352
+   >> [DIAGNOSTIC] flat: 0.000224 | stairway: 0.000926
+Epoch 6/60 | Train Loss: 0.000814 | Val Loss: 0.000691 | Val MAE: 0.022922 | Val RMSE: 0.038278
+   >> [DIAGNOSTIC] flat: 0.000239 | stairway: 0.000918
+Epoch 7/60 | Train Loss: 0.000809 | Val Loss: 0.000688 | Val MAE: 0.022656 | Val RMSE: 0.038103
+   >> [DIAGNOSTIC] flat: 0.000215 | stairway: 0.000924
+Epoch 8/60 | Train Loss: 0.000802 | Val Loss: 0.000672 | Val MAE: 0.022078 | Val RMSE: 0.038398
+   >> [DIAGNOSTIC] flat: 0.000199 | stairway: 0.000908
+Epoch 9/60 | Train Loss: 0.000787 | Val Loss: 0.000681 | Val MAE: 0.022153 | Val RMSE: 0.038702
+   >> [DIAGNOSTIC] flat: 0.000201 | stairway: 0.000921
+Epoch 10/60 | Train Loss: 0.000787 | Val Loss: 0.000653 | Val MAE: 0.022021 | Val RMSE: 0.037571
+   >> [DIAGNOSTIC] flat: 0.000195 | stairway: 0.000883
+Epoch 11/60 | Train Loss: 0.000794 | Val Loss: 0.000679 | Val MAE: 0.022278 | Val RMSE: 0.038478
+   >> [DIAGNOSTIC] flat: 0.000209 | stairway: 0.000914
+Epoch 12/60 | Train Loss: 0.000770 | Val Loss: 0.000633 | Val MAE: 0.021635 | Val RMSE: 0.037113
+   >> [DIAGNOSTIC] flat: 0.000207 | stairway: 0.000846
+Epoch 13/60 | Train Loss: 0.000775 | Val Loss: 0.000644 | Val MAE: 0.021733 | Val RMSE: 0.037512
+   >> [DIAGNOSTIC] flat: 0.000206 | stairway: 0.000862
+Epoch 14/60 | Train Loss: 0.000780 | Val Loss: 0.000598 | Val MAE: 0.021121 | Val RMSE: 0.035980
+   >> [DIAGNOSTIC] flat: 0.000201 | stairway: 0.000797
+Epoch 15/60 | Train Loss: 0.000781 | Val Loss: 0.000606 | Val MAE: 0.021008 | Val RMSE: 0.036072
+   >> [DIAGNOSTIC] flat: 0.000194 | stairway: 0.000812
+Epoch 16/60 | Train Loss: 0.000759 | Val Loss: 0.000604 | Val MAE: 0.020862 | Val RMSE: 0.036466
+   >> [DIAGNOSTIC] flat: 0.000188 | stairway: 0.000812
+Epoch 17/60 | Train Loss: 0.000761 | Val Loss: 0.000602 | Val MAE: 0.021166 | Val RMSE: 0.035741
+   >> [DIAGNOSTIC] flat: 0.000188 | stairway: 0.000808
+Epoch 18/60 | Train Loss: 0.000752 | Val Loss: 0.000602 | Val MAE: 0.021275 | Val RMSE: 0.035827
+   >> [DIAGNOSTIC] flat: 0.000195 | stairway: 0.000806
+Epoch 19/60 | Train Loss: 0.000749 | Val Loss: 0.000624 | Val MAE: 0.021162 | Val RMSE: 0.036498
+   >> [DIAGNOSTIC] flat: 0.000186 | stairway: 0.000843
+Epoch 20/60 | Train Loss: 0.000747 | Val Loss: 0.000588 | Val MAE: 0.020646 | Val RMSE: 0.035366
+   >> [DIAGNOSTIC] flat: 0.000175 | stairway: 0.000794
+Epoch 21/60 | Train Loss: 0.000749 | Val Loss: 0.000592 | Val MAE: 0.020703 | Val RMSE: 0.035691
+   >> [DIAGNOSTIC] flat: 0.000178 | stairway: 0.000799
+Epoch 22/60 | Train Loss: 0.000757 | Val Loss: 0.000590 | Val MAE: 0.020680 | Val RMSE: 0.035556
+   >> [DIAGNOSTIC] flat: 0.000176 | stairway: 0.000797
+Epoch 23/60 | Train Loss: 0.000747 | Val Loss: 0.000610 | Val MAE: 0.021227 | Val RMSE: 0.036266
+   >> [DIAGNOSTIC] flat: 0.000184 | stairway: 0.000823
+Epoch 24/60 | Train Loss: 0.000753 | Val Loss: 0.000568 | Val MAE: 0.020540 | Val RMSE: 0.034649
+   >> [DIAGNOSTIC] flat: 0.000177 | stairway: 0.000763
+Epoch 25/60 | Train Loss: 0.000742 | Val Loss: 0.000606 | Val MAE: 0.021128 | Val RMSE: 0.036003
+   >> [DIAGNOSTIC] flat: 0.000186 | stairway: 0.000817
+Epoch 26/60 | Train Loss: 0.000744 | Val Loss: 0.000608 | Val MAE: 0.021319 | Val RMSE: 0.036028
+   >> [DIAGNOSTIC] flat: 0.000199 | stairway: 0.000813
+Epoch 27/60 | Train Loss: 0.000739 | Val Loss: 0.000575 | Val MAE: 0.020550 | Val RMSE: 0.035211
+   >> [DIAGNOSTIC] flat: 0.000178 | stairway: 0.000773
+Epoch 28/60 | Train Loss: 0.000741 | Val Loss: 0.000625 | Val MAE: 0.021923 | Val RMSE: 0.036515
+   >> [DIAGNOSTIC] flat: 0.000212 | stairway: 0.000831
+Epoch 29/60 | Train Loss: 0.000745 | Val Loss: 0.000590 | Val MAE: 0.021089 | Val RMSE: 0.035601
+   >> [DIAGNOSTIC] flat: 0.000184 | stairway: 0.000793
+Epoch 30/60 | Train Loss: 0.000734 | Val Loss: 0.000622 | Val MAE: 0.021374 | Val RMSE: 0.036520
+   >> [DIAGNOSTIC] flat: 0.000180 | stairway: 0.000843
+Epoch 31/60 | Train Loss: 0.000444 | Val Loss: 0.000473 | Val MAE: 0.018068 | Val RMSE: 0.031987
+   >> [DIAGNOSTIC] flat: 0.000128 | stairway: 0.000646
+Epoch 32/60 | Train Loss: 0.000435 | Val Loss: 0.000444 | Val MAE: 0.017541 | Val RMSE: 0.030867
+   >> [DIAGNOSTIC] flat: 0.000119 | stairway: 0.000606
+Epoch 33/60 | Train Loss: 0.000429 | Val Loss: 0.000457 | Val MAE: 0.017774 | Val RMSE: 0.031456
+   >> [DIAGNOSTIC] flat: 0.000121 | stairway: 0.000625
+Epoch 34/60 | Train Loss: 0.000425 | Val Loss: 0.000441 | Val MAE: 0.017443 | Val RMSE: 0.030886
+   >> [DIAGNOSTIC] flat: 0.000112 | stairway: 0.000605
+Epoch 35/60 | Train Loss: 0.000420 | Val Loss: 0.000456 | Val MAE: 0.017952 | Val RMSE: 0.031177
+   >> [DIAGNOSTIC] flat: 0.000134 | stairway: 0.000617
+Epoch 36/60 | Train Loss: 0.000419 | Val Loss: 0.000431 | Val MAE: 0.017158 | Val RMSE: 0.030438
+   >> [DIAGNOSTIC] flat: 0.000111 | stairway: 0.000590
+Epoch 37/60 | Train Loss: 0.000417 | Val Loss: 0.000435 | Val MAE: 0.017253 | Val RMSE: 0.030458
+   >> [DIAGNOSTIC] flat: 0.000111 | stairway: 0.000597
+Epoch 38/60 | Train Loss: 0.000415 | Val Loss: 0.000425 | Val MAE: 0.016933 | Val RMSE: 0.030056
+   >> [DIAGNOSTIC] flat: 0.000109 | stairway: 0.000583
+Epoch 39/60 | Train Loss: 0.000414 | Val Loss: 0.000434 | Val MAE: 0.017170 | Val RMSE: 0.030570
+   >> [DIAGNOSTIC] flat: 0.000109 | stairway: 0.000597
+Epoch 40/60 | Train Loss: 0.000413 | Val Loss: 0.000412 | Val MAE: 0.016790 | Val RMSE: 0.029581
+   >> [DIAGNOSTIC] flat: 0.000108 | stairway: 0.000563
+Epoch 41/60 | Train Loss: 0.000415 | Val Loss: 0.000418 | Val MAE: 0.016859 | Val RMSE: 0.029904
+   >> [DIAGNOSTIC] flat: 0.000107 | stairway: 0.000574
+Epoch 42/60 | Train Loss: 0.000412 | Val Loss: 0.000416 | Val MAE: 0.016851 | Val RMSE: 0.029888
+   >> [DIAGNOSTIC] flat: 0.000106 | stairway: 0.000572
+Epoch 43/60 | Train Loss: 0.000410 | Val Loss: 0.000428 | Val MAE: 0.017212 | Val RMSE: 0.030122
+   >> [DIAGNOSTIC] flat: 0.000114 | stairway: 0.000585
+Epoch 44/60 | Train Loss: 0.000413 | Val Loss: 0.000411 | Val MAE: 0.016716 | Val RMSE: 0.029582
+   >> [DIAGNOSTIC] flat: 0.000105 | stairway: 0.000565
+Epoch 45/60 | Train Loss: 0.000409 | Val Loss: 0.000410 | Val MAE: 0.016625 | Val RMSE: 0.029635
+   >> [DIAGNOSTIC] flat: 0.000101 | stairway: 0.000564
+Epoch 46/60 | Train Loss: 0.000407 | Val Loss: 0.000421 | Val MAE: 0.016777 | Val RMSE: 0.030125
+   >> [DIAGNOSTIC] flat: 0.000105 | stairway: 0.000579
+Epoch 47/60 | Train Loss: 0.000407 | Val Loss: 0.000435 | Val MAE: 0.017181 | Val RMSE: 0.030545
+   >> [DIAGNOSTIC] flat: 0.000114 | stairway: 0.000596
+Epoch 48/60 | Train Loss: 0.000407 | Val Loss: 0.000415 | Val MAE: 0.016723 | Val RMSE: 0.029818
+   >> [DIAGNOSTIC] flat: 0.000104 | stairway: 0.000571
+Early stopping at epoch 48 (no improvement for 8 epochs). Best val loss: 0.000412
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.016790 | Overall RMSE: 0.029581
+   motor_1     MAE: 0.010056   RMSE: 0.014661
+   motor_2     MAE: 0.009478   RMSE: 0.015131
+   motor_3     MAE: 0.011344   RMSE: 0.017177
+   motor_4     MAE: 0.014134   RMSE: 0.021779
+   motor_5     MAE: 0.012888   RMSE: 0.020858
+   motor_6     MAE: 0.015881   RMSE: 0.028249
+   motor_7     MAE: 0.017251   RMSE: 0.026411
+   motor_8     MAE: 0.013882   RMSE: 0.021060
+   motor_9     MAE: 0.013854   RMSE: 0.020539
+   motor_10    MAE: 0.016743   RMSE: 0.026560
+   motor_11    MAE: 0.018075   RMSE: 0.030442
+   motor_12    MAE: 0.020905   RMSE: 0.034215
+   motor_13    MAE: 0.020998   RMSE: 0.033816
+   motor_14    MAE: 0.016331   RMSE: 0.025664
+   motor_15    MAE: 0.016515   RMSE: 0.029159
+   motor_16    MAE: 0.030764   RMSE: 0.052726
+   motor_17    MAE: 0.026934   RMSE: 0.050834
+   motor_18    MAE: 0.017335   RMSE: 0.030954
+   motor_19    MAE: 0.015636   RMSE: 0.028968
+   [flat]  MAE: 0.010329   RMSE: 0.014705   (n=50000)
+   [stairway]  MAE: 0.020020   RMSE: 0.034705   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/umbc_seed_123_history.pkl
+training_time_sec:  733.2255566120148
+
+================================================================================
+RUNNING TRAINING PIPELINE FOR SEED: 456
+================================================================================
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001826 | Val Loss: 0.001009 | Val MAE: 0.029617 | Val RMSE: 0.045060
+   >> [DIAGNOSTIC] flat: 0.000403 | stairway: 0.001312
+Epoch 2/60 | Train Loss: 0.001159 | Val Loss: 0.000896 | Val MAE: 0.028307 | Val RMSE: 0.042362
+   >> [DIAGNOSTIC] flat: 0.000375 | stairway: 0.001157
+Epoch 3/60 | Train Loss: 0.000986 | Val Loss: 0.000874 | Val MAE: 0.026718 | Val RMSE: 0.041939
+   >> [DIAGNOSTIC] flat: 0.000321 | stairway: 0.001150
+Epoch 4/60 | Train Loss: 0.000924 | Val Loss: 0.000762 | Val MAE: 0.025336 | Val RMSE: 0.039134
+   >> [DIAGNOSTIC] flat: 0.000271 | stairway: 0.001008
+Epoch 5/60 | Train Loss: 0.000899 | Val Loss: 0.000724 | Val MAE: 0.025150 | Val RMSE: 0.038153
+   >> [DIAGNOSTIC] flat: 0.000275 | stairway: 0.000949
+Epoch 6/60 | Train Loss: 0.000876 | Val Loss: 0.000699 | Val MAE: 0.024454 | Val RMSE: 0.037430
+   >> [DIAGNOSTIC] flat: 0.000255 | stairway: 0.000921
+Epoch 7/60 | Train Loss: 0.000851 | Val Loss: 0.000811 | Val MAE: 0.026883 | Val RMSE: 0.040313
+   >> [DIAGNOSTIC] flat: 0.000343 | stairway: 0.001044
+Epoch 8/60 | Train Loss: 0.000842 | Val Loss: 0.000761 | Val MAE: 0.025557 | Val RMSE: 0.039098
+   >> [DIAGNOSTIC] flat: 0.000300 | stairway: 0.000992
+Epoch 9/60 | Train Loss: 0.000830 | Val Loss: 0.000692 | Val MAE: 0.023972 | Val RMSE: 0.037335
+   >> [DIAGNOSTIC] flat: 0.000240 | stairway: 0.000917
+Epoch 10/60 | Train Loss: 0.000823 | Val Loss: 0.000807 | Val MAE: 0.026929 | Val RMSE: 0.040325
+   >> [DIAGNOSTIC] flat: 0.000340 | stairway: 0.001041
+Epoch 11/60 | Train Loss: 0.000807 | Val Loss: 0.000705 | Val MAE: 0.024355 | Val RMSE: 0.037723
+   >> [DIAGNOSTIC] flat: 0.000284 | stairway: 0.000915
+Epoch 12/60 | Train Loss: 0.000815 | Val Loss: 0.000676 | Val MAE: 0.024011 | Val RMSE: 0.036835
+   >> [DIAGNOSTIC] flat: 0.000265 | stairway: 0.000881
+Epoch 13/60 | Train Loss: 0.000807 | Val Loss: 0.000730 | Val MAE: 0.025384 | Val RMSE: 0.038295
+   >> [DIAGNOSTIC] flat: 0.000343 | stairway: 0.000923
+Epoch 14/60 | Train Loss: 0.000797 | Val Loss: 0.000680 | Val MAE: 0.024650 | Val RMSE: 0.036978
+   >> [DIAGNOSTIC] flat: 0.000294 | stairway: 0.000872
+Epoch 15/60 | Train Loss: 0.000787 | Val Loss: 0.000735 | Val MAE: 0.025394 | Val RMSE: 0.038433
+   >> [DIAGNOSTIC] flat: 0.000305 | stairway: 0.000950
+Epoch 16/60 | Train Loss: 0.000801 | Val Loss: 0.000752 | Val MAE: 0.025377 | Val RMSE: 0.038908
+   >> [DIAGNOSTIC] flat: 0.000327 | stairway: 0.000964
+Epoch 17/60 | Train Loss: 0.000781 | Val Loss: 0.000735 | Val MAE: 0.025308 | Val RMSE: 0.038414
+   >> [DIAGNOSTIC] flat: 0.000284 | stairway: 0.000960
+Epoch 18/60 | Train Loss: 0.000783 | Val Loss: 0.000675 | Val MAE: 0.023910 | Val RMSE: 0.036819
+   >> [DIAGNOSTIC] flat: 0.000234 | stairway: 0.000895
+Epoch 19/60 | Train Loss: 0.000788 | Val Loss: 0.000733 | Val MAE: 0.025256 | Val RMSE: 0.038452
+   >> [DIAGNOSTIC] flat: 0.000300 | stairway: 0.000949
+Epoch 20/60 | Train Loss: 0.000785 | Val Loss: 0.000630 | Val MAE: 0.023065 | Val RMSE: 0.035557
+   >> [DIAGNOSTIC] flat: 0.000238 | stairway: 0.000826
+Epoch 21/60 | Train Loss: 0.000781 | Val Loss: 0.000591 | Val MAE: 0.022246 | Val RMSE: 0.034435
+   >> [DIAGNOSTIC] flat: 0.000221 | stairway: 0.000775
+Epoch 22/60 | Train Loss: 0.000780 | Val Loss: 0.000569 | Val MAE: 0.021679 | Val RMSE: 0.033868
+   >> [DIAGNOSTIC] flat: 0.000195 | stairway: 0.000757
+Epoch 23/60 | Train Loss: 0.000793 | Val Loss: 0.000588 | Val MAE: 0.022630 | Val RMSE: 0.034373
+   >> [DIAGNOSTIC] flat: 0.000219 | stairway: 0.000773
+Epoch 24/60 | Train Loss: 0.000772 | Val Loss: 0.000591 | Val MAE: 0.022484 | Val RMSE: 0.034437
+   >> [DIAGNOSTIC] flat: 0.000220 | stairway: 0.000776
+Epoch 25/60 | Train Loss: 0.000778 | Val Loss: 0.000583 | Val MAE: 0.022380 | Val RMSE: 0.034282
+   >> [DIAGNOSTIC] flat: 0.000217 | stairway: 0.000766
+Epoch 26/60 | Train Loss: 0.000786 | Val Loss: 0.000620 | Val MAE: 0.022976 | Val RMSE: 0.035336
+   >> [DIAGNOSTIC] flat: 0.000220 | stairway: 0.000820
+Epoch 27/60 | Train Loss: 0.000784 | Val Loss: 0.000656 | Val MAE: 0.023702 | Val RMSE: 0.036380
+   >> [DIAGNOSTIC] flat: 0.000267 | stairway: 0.000851
+Epoch 28/60 | Train Loss: 0.000774 | Val Loss: 0.000620 | Val MAE: 0.022520 | Val RMSE: 0.035321
+   >> [DIAGNOSTIC] flat: 0.000208 | stairway: 0.000826
+Epoch 29/60 | Train Loss: 0.000465 | Val Loss: 0.000403 | Val MAE: 0.018272 | Val RMSE: 0.028496
+   >> [DIAGNOSTIC] flat: 0.000124 | stairway: 0.000543
+Epoch 30/60 | Train Loss: 0.000454 | Val Loss: 0.000372 | Val MAE: 0.017482 | Val RMSE: 0.027376
+   >> [DIAGNOSTIC] flat: 0.000113 | stairway: 0.000502
+Epoch 31/60 | Train Loss: 0.000447 | Val Loss: 0.000379 | Val MAE: 0.017743 | Val RMSE: 0.027633
+   >> [DIAGNOSTIC] flat: 0.000118 | stairway: 0.000510
+Epoch 32/60 | Train Loss: 0.000443 | Val Loss: 0.000377 | Val MAE: 0.017580 | Val RMSE: 0.027521
+   >> [DIAGNOSTIC] flat: 0.000115 | stairway: 0.000509
+Epoch 33/60 | Train Loss: 0.000438 | Val Loss: 0.000372 | Val MAE: 0.017549 | Val RMSE: 0.027300
+   >> [DIAGNOSTIC] flat: 0.000110 | stairway: 0.000503
+Epoch 34/60 | Train Loss: 0.000436 | Val Loss: 0.000393 | Val MAE: 0.017911 | Val RMSE: 0.028102
+   >> [DIAGNOSTIC] flat: 0.000115 | stairway: 0.000533
+Epoch 35/60 | Train Loss: 0.000435 | Val Loss: 0.000359 | Val MAE: 0.017221 | Val RMSE: 0.026848
+   >> [DIAGNOSTIC] flat: 0.000114 | stairway: 0.000481
+Epoch 36/60 | Train Loss: 0.000431 | Val Loss: 0.000365 | Val MAE: 0.017537 | Val RMSE: 0.027057
+   >> [DIAGNOSTIC] flat: 0.000111 | stairway: 0.000492
+Epoch 37/60 | Train Loss: 0.000432 | Val Loss: 0.000383 | Val MAE: 0.017691 | Val RMSE: 0.027730
+   >> [DIAGNOSTIC] flat: 0.000111 | stairway: 0.000519
+Epoch 38/60 | Train Loss: 0.000453 | Val Loss: 0.000391 | Val MAE: 0.017982 | Val RMSE: 0.028019
+   >> [DIAGNOSTIC] flat: 0.000114 | stairway: 0.000529
+Epoch 39/60 | Train Loss: 0.000429 | Val Loss: 0.000367 | Val MAE: 0.017523 | Val RMSE: 0.027165
+   >> [DIAGNOSTIC] flat: 0.000114 | stairway: 0.000494
+Epoch 40/60 | Train Loss: 0.000457 | Val Loss: 0.000412 | Val MAE: 0.018551 | Val RMSE: 0.028800
+   >> [DIAGNOSTIC] flat: 0.000117 | stairway: 0.000560
+Epoch 41/60 | Train Loss: 0.000424 | Val Loss: 0.000377 | Val MAE: 0.017814 | Val RMSE: 0.027529
+   >> [DIAGNOSTIC] flat: 0.000120 | stairway: 0.000506
+Epoch 42/60 | Train Loss: 0.000307 | Val Loss: 0.000279 | Val MAE: 0.014979 | Val RMSE: 0.023648
+   >> [DIAGNOSTIC] flat: 0.000074 | stairway: 0.000381
+Epoch 43/60 | Train Loss: 0.000300 | Val Loss: 0.000279 | Val MAE: 0.014962 | Val RMSE: 0.023681
+   >> [DIAGNOSTIC] flat: 0.000073 | stairway: 0.000383
+Epoch 44/60 | Train Loss: 0.000297 | Val Loss: 0.000269 | Val MAE: 0.014632 | Val RMSE: 0.023258
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000368
+Epoch 45/60 | Train Loss: 0.000294 | Val Loss: 0.000269 | Val MAE: 0.014680 | Val RMSE: 0.023243
+   >> [DIAGNOSTIC] flat: 0.000071 | stairway: 0.000368
+Epoch 46/60 | Train Loss: 0.000293 | Val Loss: 0.000265 | Val MAE: 0.014573 | Val RMSE: 0.023063
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000362
+Epoch 47/60 | Train Loss: 0.000287 | Val Loss: 0.000262 | Val MAE: 0.014474 | Val RMSE: 0.022941
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000358
+Epoch 48/60 | Train Loss: 0.000286 | Val Loss: 0.000261 | Val MAE: 0.014447 | Val RMSE: 0.022910
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000357
+Epoch 49/60 | Train Loss: 0.000285 | Val Loss: 0.000260 | Val MAE: 0.014441 | Val RMSE: 0.022842
+   >> [DIAGNOSTIC] flat: 0.000068 | stairway: 0.000355
+Epoch 50/60 | Train Loss: 0.000283 | Val Loss: 0.000262 | Val MAE: 0.014565 | Val RMSE: 0.022936
+   >> [DIAGNOSTIC] flat: 0.000070 | stairway: 0.000358
+Epoch 51/60 | Train Loss: 0.000280 | Val Loss: 0.000258 | Val MAE: 0.014426 | Val RMSE: 0.022782
+   >> [DIAGNOSTIC] flat: 0.000071 | stairway: 0.000351
+Epoch 52/60 | Train Loss: 0.000280 | Val Loss: 0.000256 | Val MAE: 0.014339 | Val RMSE: 0.022707
+   >> [DIAGNOSTIC] flat: 0.000066 | stairway: 0.000350
+Epoch 53/60 | Train Loss: 0.000278 | Val Loss: 0.000258 | Val MAE: 0.014431 | Val RMSE: 0.022763
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000352
+Epoch 54/60 | Train Loss: 0.000278 | Val Loss: 0.000255 | Val MAE: 0.014260 | Val RMSE: 0.022657
+   >> [DIAGNOSTIC] flat: 0.000068 | stairway: 0.000348
+Epoch 55/60 | Train Loss: 0.000277 | Val Loss: 0.000250 | Val MAE: 0.014194 | Val RMSE: 0.022358
+   >> [DIAGNOSTIC] flat: 0.000068 | stairway: 0.000340
+Epoch 56/60 | Train Loss: 0.000275 | Val Loss: 0.000248 | Val MAE: 0.014138 | Val RMSE: 0.022343
+   >> [DIAGNOSTIC] flat: 0.000065 | stairway: 0.000340
+Epoch 57/60 | Train Loss: 0.000275 | Val Loss: 0.000246 | Val MAE: 0.014073 | Val RMSE: 0.022199
+   >> [DIAGNOSTIC] flat: 0.000065 | stairway: 0.000336
+Epoch 58/60 | Train Loss: 0.000273 | Val Loss: 0.000247 | Val MAE: 0.014059 | Val RMSE: 0.022296
+   >> [DIAGNOSTIC] flat: 0.000064 | stairway: 0.000339
+Epoch 59/60 | Train Loss: 0.000273 | Val Loss: 0.000254 | Val MAE: 0.014377 | Val RMSE: 0.022571
+   >> [DIAGNOSTIC] flat: 0.000064 | stairway: 0.000349
+Epoch 60/60 | Train Loss: 0.000270 | Val Loss: 0.000249 | Val MAE: 0.014106 | Val RMSE: 0.022362
+   >> [DIAGNOSTIC] flat: 0.000062 | stairway: 0.000343
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.014073 | Overall RMSE: 0.022199
+   motor_1     MAE: 0.008288   RMSE: 0.011995
+   motor_2     MAE: 0.008542   RMSE: 0.012307
+   motor_3     MAE: 0.009246   RMSE: 0.013130
+   motor_4     MAE: 0.011653   RMSE: 0.017238
+   motor_5     MAE: 0.011361   RMSE: 0.016982
+   motor_6     MAE: 0.014030   RMSE: 0.020475
+   motor_7     MAE: 0.014120   RMSE: 0.021296
+   motor_8     MAE: 0.012772   RMSE: 0.018385
+   motor_9     MAE: 0.010941   RMSE: 0.015877
+   motor_10    MAE: 0.014559   RMSE: 0.021985
+   motor_11    MAE: 0.014300   RMSE: 0.021499
+   motor_12    MAE: 0.016070   RMSE: 0.025306
+   motor_13    MAE: 0.016232   RMSE: 0.025202
+   motor_14    MAE: 0.013998   RMSE: 0.021129
+   motor_15    MAE: 0.014518   RMSE: 0.021558
+   motor_16    MAE: 0.024884   RMSE: 0.038669
+   motor_17    MAE: 0.023676   RMSE: 0.036534
+   motor_18    MAE: 0.014626   RMSE: 0.021573
+   motor_19    MAE: 0.013568   RMSE: 0.020467
+   [flat]  MAE: 0.008265   RMSE: 0.011417   (n=50000)
+   [stairway]  MAE: 0.016977   RMSE: 0.025961   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/umbc_seed_456_history.pkl
+training_time_sec:  923.7070896625519
+
+================================================================================
+RUNNING TRAINING PIPELINE FOR SEED: 789
+================================================================================
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001861 | Val Loss: 0.002432 | Val MAE: 0.043181 | Val RMSE: 0.069792
+   >> [DIAGNOSTIC] flat: 0.001316 | stairway: 0.002990
+Epoch 2/60 | Train Loss: 0.001115 | Val Loss: 0.002157 | Val MAE: 0.039714 | Val RMSE: 0.065775
+   >> [DIAGNOSTIC] flat: 0.000809 | stairway: 0.002831
+Epoch 3/60 | Train Loss: 0.001010 | Val Loss: 0.002169 | Val MAE: 0.037938 | Val RMSE: 0.065919
+   >> [DIAGNOSTIC] flat: 0.000842 | stairway: 0.002832
+Epoch 4/60 | Train Loss: 0.000963 | Val Loss: 0.003006 | Val MAE: 0.044762 | Val RMSE: 0.077632
+   >> [DIAGNOSTIC] flat: 0.001309 | stairway: 0.003855
+Epoch 5/60 | Train Loss: 0.000929 | Val Loss: 0.001988 | Val MAE: 0.038491 | Val RMSE: 0.063132
+   >> [DIAGNOSTIC] flat: 0.000862 | stairway: 0.002552
+Epoch 6/60 | Train Loss: 0.000903 | Val Loss: 0.001539 | Val MAE: 0.035554 | Val RMSE: 0.055479
+   >> [DIAGNOSTIC] flat: 0.000878 | stairway: 0.001869
+Epoch 7/60 | Train Loss: 0.000886 | Val Loss: 0.001665 | Val MAE: 0.038781 | Val RMSE: 0.057723
+   >> [DIAGNOSTIC] flat: 0.000992 | stairway: 0.002002
+Epoch 8/60 | Train Loss: 0.000853 | Val Loss: 0.001655 | Val MAE: 0.034034 | Val RMSE: 0.057573
+   >> [DIAGNOSTIC] flat: 0.000601 | stairway: 0.002182
+Epoch 9/60 | Train Loss: 0.000865 | Val Loss: 0.001336 | Val MAE: 0.032173 | Val RMSE: 0.051732
+   >> [DIAGNOSTIC] flat: 0.000664 | stairway: 0.001672
+Epoch 10/60 | Train Loss: 0.000844 | Val Loss: 0.000995 | Val MAE: 0.028580 | Val RMSE: 0.044626
+   >> [DIAGNOSTIC] flat: 0.000396 | stairway: 0.001295
+Epoch 11/60 | Train Loss: 0.000842 | Val Loss: 0.002091 | Val MAE: 0.039174 | Val RMSE: 0.064685
+   >> [DIAGNOSTIC] flat: 0.001021 | stairway: 0.002626
+Epoch 12/60 | Train Loss: 0.000840 | Val Loss: 0.001592 | Val MAE: 0.036459 | Val RMSE: 0.056480
+   >> [DIAGNOSTIC] flat: 0.000838 | stairway: 0.001969
+Epoch 13/60 | Train Loss: 0.000840 | Val Loss: 0.001470 | Val MAE: 0.035157 | Val RMSE: 0.054254
+   >> [DIAGNOSTIC] flat: 0.000685 | stairway: 0.001863
+Epoch 14/60 | Train Loss: 0.000833 | Val Loss: 0.001010 | Val MAE: 0.030168 | Val RMSE: 0.044967
+   >> [DIAGNOSTIC] flat: 0.000540 | stairway: 0.001245
+Epoch 15/60 | Train Loss: 0.000880 | Val Loss: 0.001766 | Val MAE: 0.035509 | Val RMSE: 0.059467
+   >> [DIAGNOSTIC] flat: 0.000892 | stairway: 0.002203
+Epoch 16/60 | Train Loss: 0.000845 | Val Loss: 0.000849 | Val MAE: 0.027627 | Val RMSE: 0.041237
+   >> [DIAGNOSTIC] flat: 0.000377 | stairway: 0.001085
+Epoch 17/60 | Train Loss: 0.000837 | Val Loss: 0.001199 | Val MAE: 0.032589 | Val RMSE: 0.048986
+   >> [DIAGNOSTIC] flat: 0.000526 | stairway: 0.001536
+Epoch 18/60 | Train Loss: 0.000832 | Val Loss: 0.001427 | Val MAE: 0.034807 | Val RMSE: 0.053448
+   >> [DIAGNOSTIC] flat: 0.000657 | stairway: 0.001812
+Epoch 19/60 | Train Loss: 0.000815 | Val Loss: 0.001613 | Val MAE: 0.034909 | Val RMSE: 0.056812
+   >> [DIAGNOSTIC] flat: 0.000877 | stairway: 0.001982
+Epoch 20/60 | Train Loss: 0.000820 | Val Loss: 0.001159 | Val MAE: 0.033214 | Val RMSE: 0.048147
+   >> [DIAGNOSTIC] flat: 0.000652 | stairway: 0.001412
+Epoch 21/60 | Train Loss: 0.000819 | Val Loss: 0.001519 | Val MAE: 0.034948 | Val RMSE: 0.055137
+   >> [DIAGNOSTIC] flat: 0.000734 | stairway: 0.001912
+Epoch 22/60 | Train Loss: 0.000824 | Val Loss: 0.001674 | Val MAE: 0.035442 | Val RMSE: 0.057888
+   >> [DIAGNOSTIC] flat: 0.000724 | stairway: 0.002150
+Epoch 23/60 | Train Loss: 0.000494 | Val Loss: 0.000592 | Val MAE: 0.022861 | Val RMSE: 0.034402
+   >> [DIAGNOSTIC] flat: 0.000234 | stairway: 0.000770
+Epoch 24/60 | Train Loss: 0.000481 | Val Loss: 0.000623 | Val MAE: 0.022580 | Val RMSE: 0.035297
+   >> [DIAGNOSTIC] flat: 0.000197 | stairway: 0.000836
+Epoch 25/60 | Train Loss: 0.000470 | Val Loss: 0.000789 | Val MAE: 0.027123 | Val RMSE: 0.039721
+   >> [DIAGNOSTIC] flat: 0.000440 | stairway: 0.000963
+Epoch 26/60 | Train Loss: 0.000464 | Val Loss: 0.000787 | Val MAE: 0.026547 | Val RMSE: 0.039694
+   >> [DIAGNOSTIC] flat: 0.000403 | stairway: 0.000980
+Epoch 27/60 | Train Loss: 0.000465 | Val Loss: 0.000923 | Val MAE: 0.027701 | Val RMSE: 0.042967
+   >> [DIAGNOSTIC] flat: 0.000461 | stairway: 0.001154
+Epoch 28/60 | Train Loss: 0.000458 | Val Loss: 0.000706 | Val MAE: 0.023916 | Val RMSE: 0.037577
+   >> [DIAGNOSTIC] flat: 0.000251 | stairway: 0.000934
+Epoch 29/60 | Train Loss: 0.000453 | Val Loss: 0.001193 | Val MAE: 0.030050 | Val RMSE: 0.048857
+   >> [DIAGNOSTIC] flat: 0.000599 | stairway: 0.001491
+Epoch 30/60 | Train Loss: 0.000334 | Val Loss: 0.000369 | Val MAE: 0.017363 | Val RMSE: 0.027158
+   >> [DIAGNOSTIC] flat: 0.000100 | stairway: 0.000503
+Epoch 31/60 | Train Loss: 0.000327 | Val Loss: 0.000341 | Val MAE: 0.016644 | Val RMSE: 0.026099
+   >> [DIAGNOSTIC] flat: 0.000090 | stairway: 0.000466
+Epoch 32/60 | Train Loss: 0.000320 | Val Loss: 0.000333 | Val MAE: 0.016544 | Val RMSE: 0.025816
+   >> [DIAGNOSTIC] flat: 0.000097 | stairway: 0.000451
+Epoch 33/60 | Train Loss: 0.000317 | Val Loss: 0.000338 | Val MAE: 0.016476 | Val RMSE: 0.025991
+   >> [DIAGNOSTIC] flat: 0.000090 | stairway: 0.000462
+Epoch 34/60 | Train Loss: 0.000313 | Val Loss: 0.000337 | Val MAE: 0.016276 | Val RMSE: 0.025970
+   >> [DIAGNOSTIC] flat: 0.000088 | stairway: 0.000462
+Epoch 35/60 | Train Loss: 0.000309 | Val Loss: 0.000331 | Val MAE: 0.016298 | Val RMSE: 0.025731
+   >> [DIAGNOSTIC] flat: 0.000094 | stairway: 0.000450
+Epoch 36/60 | Train Loss: 0.000308 | Val Loss: 0.000349 | Val MAE: 0.016747 | Val RMSE: 0.026407
+   >> [DIAGNOSTIC] flat: 0.000104 | stairway: 0.000471
+Epoch 37/60 | Train Loss: 0.000307 | Val Loss: 0.000308 | Val MAE: 0.015937 | Val RMSE: 0.024815
+   >> [DIAGNOSTIC] flat: 0.000083 | stairway: 0.000420
+Epoch 38/60 | Train Loss: 0.000303 | Val Loss: 0.000344 | Val MAE: 0.016548 | Val RMSE: 0.026224
+   >> [DIAGNOSTIC] flat: 0.000096 | stairway: 0.000468
+Epoch 39/60 | Train Loss: 0.000299 | Val Loss: 0.000342 | Val MAE: 0.016711 | Val RMSE: 0.026158
+   >> [DIAGNOSTIC] flat: 0.000109 | stairway: 0.000459
+Epoch 40/60 | Train Loss: 0.000297 | Val Loss: 0.000309 | Val MAE: 0.015962 | Val RMSE: 0.024844
+   >> [DIAGNOSTIC] flat: 0.000086 | stairway: 0.000420
+Epoch 41/60 | Train Loss: 0.000296 | Val Loss: 0.000317 | Val MAE: 0.016305 | Val RMSE: 0.025162
+   >> [DIAGNOSTIC] flat: 0.000092 | stairway: 0.000429
+Epoch 42/60 | Train Loss: 0.000295 | Val Loss: 0.000370 | Val MAE: 0.017246 | Val RMSE: 0.027216
+   >> [DIAGNOSTIC] flat: 0.000131 | stairway: 0.000490
+Epoch 43/60 | Train Loss: 0.000292 | Val Loss: 0.000331 | Val MAE: 0.016675 | Val RMSE: 0.025729
+   >> [DIAGNOSTIC] flat: 0.000095 | stairway: 0.000449
+Epoch 44/60 | Train Loss: 0.000239 | Val Loss: 0.000245 | Val MAE: 0.014107 | Val RMSE: 0.022120
+   >> [DIAGNOSTIC] flat: 0.000063 | stairway: 0.000336
+Epoch 45/60 | Train Loss: 0.000235 | Val Loss: 0.000241 | Val MAE: 0.013989 | Val RMSE: 0.021970
+   >> [DIAGNOSTIC] flat: 0.000062 | stairway: 0.000331
+Epoch 46/60 | Train Loss: 0.000232 | Val Loss: 0.000239 | Val MAE: 0.013900 | Val RMSE: 0.021853
+   >> [DIAGNOSTIC] flat: 0.000061 | stairway: 0.000328
+Epoch 47/60 | Train Loss: 0.000230 | Val Loss: 0.000235 | Val MAE: 0.013814 | Val RMSE: 0.021703
+   >> [DIAGNOSTIC] flat: 0.000060 | stairway: 0.000323
+Epoch 48/60 | Train Loss: 0.000227 | Val Loss: 0.000234 | Val MAE: 0.013731 | Val RMSE: 0.021611
+   >> [DIAGNOSTIC] flat: 0.000059 | stairway: 0.000321
+Epoch 49/60 | Train Loss: 0.000224 | Val Loss: 0.000231 | Val MAE: 0.013687 | Val RMSE: 0.021511
+   >> [DIAGNOSTIC] flat: 0.000059 | stairway: 0.000317
+Epoch 50/60 | Train Loss: 0.000223 | Val Loss: 0.000237 | Val MAE: 0.013850 | Val RMSE: 0.021761
+   >> [DIAGNOSTIC] flat: 0.000065 | stairway: 0.000323
+Epoch 51/60 | Train Loss: 0.000220 | Val Loss: 0.000234 | Val MAE: 0.013773 | Val RMSE: 0.021625
+   >> [DIAGNOSTIC] flat: 0.000063 | stairway: 0.000319
+Epoch 52/60 | Train Loss: 0.000219 | Val Loss: 0.000224 | Val MAE: 0.013425 | Val RMSE: 0.021175
+   >> [DIAGNOSTIC] flat: 0.000056 | stairway: 0.000308
+Epoch 53/60 | Train Loss: 0.000217 | Val Loss: 0.000225 | Val MAE: 0.013470 | Val RMSE: 0.021202
+   >> [DIAGNOSTIC] flat: 0.000058 | stairway: 0.000308
+Epoch 54/60 | Train Loss: 0.000216 | Val Loss: 0.000224 | Val MAE: 0.013418 | Val RMSE: 0.021155
+   >> [DIAGNOSTIC] flat: 0.000057 | stairway: 0.000307
+Epoch 55/60 | Train Loss: 0.000215 | Val Loss: 0.000222 | Val MAE: 0.013416 | Val RMSE: 0.021059
+   >> [DIAGNOSTIC] flat: 0.000059 | stairway: 0.000303
+Epoch 56/60 | Train Loss: 0.000213 | Val Loss: 0.000219 | Val MAE: 0.013307 | Val RMSE: 0.020927
+   >> [DIAGNOSTIC] flat: 0.000057 | stairway: 0.000300
+Epoch 57/60 | Train Loss: 0.000212 | Val Loss: 0.000222 | Val MAE: 0.013283 | Val RMSE: 0.021052
+   >> [DIAGNOSTIC] flat: 0.000053 | stairway: 0.000306
+Epoch 58/60 | Train Loss: 0.000211 | Val Loss: 0.000224 | Val MAE: 0.013379 | Val RMSE: 0.021184
+   >> [DIAGNOSTIC] flat: 0.000055 | stairway: 0.000309
+Epoch 59/60 | Train Loss: 0.000211 | Val Loss: 0.000217 | Val MAE: 0.013125 | Val RMSE: 0.020821
+   >> [DIAGNOSTIC] flat: 0.000051 | stairway: 0.000299
+Epoch 60/60 | Train Loss: 0.000209 | Val Loss: 0.000221 | Val MAE: 0.013225 | Val RMSE: 0.021035
+   >> [DIAGNOSTIC] flat: 0.000052 | stairway: 0.000306
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.013416 | Overall RMSE: 0.021059
+   motor_1     MAE: 0.007917   RMSE: 0.011283
+   motor_2     MAE: 0.007293   RMSE: 0.010652
+   motor_3     MAE: 0.008521   RMSE: 0.012145
+   motor_4     MAE: 0.010216   RMSE: 0.015187
+   motor_5     MAE: 0.010123   RMSE: 0.015198
+   motor_6     MAE: 0.013695   RMSE: 0.019967
+   motor_7     MAE: 0.013311   RMSE: 0.019727
+   motor_8     MAE: 0.010564   RMSE: 0.015367
+   motor_9     MAE: 0.010063   RMSE: 0.014795
+   motor_10    MAE: 0.016287   RMSE: 0.022464
+   motor_11    MAE: 0.013447   RMSE: 0.020085
+   motor_12    MAE: 0.016466   RMSE: 0.024690
+   motor_13    MAE: 0.016679   RMSE: 0.025228
+   motor_14    MAE: 0.012249   RMSE: 0.018585
+   motor_15    MAE: 0.012642   RMSE: 0.019394
+   motor_16    MAE: 0.021705   RMSE: 0.033765
+   motor_17    MAE: 0.026583   RMSE: 0.038633
+   motor_18    MAE: 0.014726   RMSE: 0.021870
+   motor_19    MAE: 0.012413   RMSE: 0.018627
+   [flat]  MAE: 0.007613   RMSE: 0.010851   (n=50000)
+   [stairway]  MAE: 0.016317   RMSE: 0.024624   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/umbc_seed_789_history.pkl
+training_time_sec:  946.4330444335938
+
+================================================================================
+RUNNING TRAINING PIPELINE FOR SEED: 999
+================================================================================
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001884 | Val Loss: 0.000998 | Val MAE: 0.029860 | Val RMSE: 0.044776
+   >> [DIAGNOSTIC] flat: 0.000464 | stairway: 0.001264
+Epoch 2/60 | Train Loss: 0.001114 | Val Loss: 0.000846 | Val MAE: 0.027591 | Val RMSE: 0.041202
+   >> [DIAGNOSTIC] flat: 0.000341 | stairway: 0.001098
+Epoch 3/60 | Train Loss: 0.000994 | Val Loss: 0.000849 | Val MAE: 0.027681 | Val RMSE: 0.041285
+   >> [DIAGNOSTIC] flat: 0.000366 | stairway: 0.001091
+Epoch 4/60 | Train Loss: 0.000935 | Val Loss: 0.000742 | Val MAE: 0.025715 | Val RMSE: 0.038562
+   >> [DIAGNOSTIC] flat: 0.000296 | stairway: 0.000964
+Epoch 5/60 | Train Loss: 0.000914 | Val Loss: 0.000751 | Val MAE: 0.025792 | Val RMSE: 0.038842
+   >> [DIAGNOSTIC] flat: 0.000306 | stairway: 0.000974
+Epoch 6/60 | Train Loss: 0.000876 | Val Loss: 0.000796 | Val MAE: 0.026642 | Val RMSE: 0.039913
+   >> [DIAGNOSTIC] flat: 0.000350 | stairway: 0.001018
+Epoch 7/60 | Train Loss: 0.000882 | Val Loss: 0.000878 | Val MAE: 0.027635 | Val RMSE: 0.041941
+   >> [DIAGNOSTIC] flat: 0.000304 | stairway: 0.001166
+Epoch 8/60 | Train Loss: 0.000834 | Val Loss: 0.000780 | Val MAE: 0.026557 | Val RMSE: 0.039580
+   >> [DIAGNOSTIC] flat: 0.000316 | stairway: 0.001012
+Epoch 9/60 | Train Loss: 0.000845 | Val Loss: 0.001450 | Val MAE: 0.038700 | Val RMSE: 0.053888
+   >> [DIAGNOSTIC] flat: 0.000790 | stairway: 0.001780
+Epoch 10/60 | Train Loss: 0.000867 | Val Loss: 0.000789 | Val MAE: 0.026445 | Val RMSE: 0.039813
+   >> [DIAGNOSTIC] flat: 0.000312 | stairway: 0.001027
+Epoch 11/60 | Train Loss: 0.000497 | Val Loss: 0.000523 | Val MAE: 0.021123 | Val RMSE: 0.032366
+   >> [DIAGNOSTIC] flat: 0.000181 | stairway: 0.000695
+Epoch 12/60 | Train Loss: 0.000477 | Val Loss: 0.000434 | Val MAE: 0.019457 | Val RMSE: 0.029481
+   >> [DIAGNOSTIC] flat: 0.000148 | stairway: 0.000578
+Epoch 13/60 | Train Loss: 0.000466 | Val Loss: 0.000450 | Val MAE: 0.019812 | Val RMSE: 0.030008
+   >> [DIAGNOSTIC] flat: 0.000158 | stairway: 0.000596
+Epoch 14/60 | Train Loss: 0.000457 | Val Loss: 0.000511 | Val MAE: 0.020580 | Val RMSE: 0.031977
+   >> [DIAGNOSTIC] flat: 0.000159 | stairway: 0.000687
+Epoch 15/60 | Train Loss: 0.000451 | Val Loss: 0.000478 | Val MAE: 0.020094 | Val RMSE: 0.030927
+   >> [DIAGNOSTIC] flat: 0.000160 | stairway: 0.000637
+Epoch 16/60 | Train Loss: 0.000447 | Val Loss: 0.000451 | Val MAE: 0.019979 | Val RMSE: 0.030022
+   >> [DIAGNOSTIC] flat: 0.000171 | stairway: 0.000590
+Epoch 17/60 | Train Loss: 0.000442 | Val Loss: 0.000429 | Val MAE: 0.019325 | Val RMSE: 0.029316
+   >> [DIAGNOSTIC] flat: 0.000153 | stairway: 0.000568
+Epoch 18/60 | Train Loss: 0.000442 | Val Loss: 0.000403 | Val MAE: 0.018662 | Val RMSE: 0.028397
+   >> [DIAGNOSTIC] flat: 0.000141 | stairway: 0.000534
+Epoch 19/60 | Train Loss: 0.000437 | Val Loss: 0.000479 | Val MAE: 0.020044 | Val RMSE: 0.030967
+   >> [DIAGNOSTIC] flat: 0.000160 | stairway: 0.000639
+Epoch 20/60 | Train Loss: 0.000437 | Val Loss: 0.000461 | Val MAE: 0.019654 | Val RMSE: 0.030355
+   >> [DIAGNOSTIC] flat: 0.000165 | stairway: 0.000609
+Epoch 21/60 | Train Loss: 0.000437 | Val Loss: 0.000483 | Val MAE: 0.020420 | Val RMSE: 0.031106
+   >> [DIAGNOSTIC] flat: 0.000181 | stairway: 0.000634
+Epoch 22/60 | Train Loss: 0.000436 | Val Loss: 0.000437 | Val MAE: 0.019443 | Val RMSE: 0.029587
+   >> [DIAGNOSTIC] flat: 0.000149 | stairway: 0.000581
+Epoch 23/60 | Train Loss: 0.000430 | Val Loss: 0.000443 | Val MAE: 0.019760 | Val RMSE: 0.029785
+   >> [DIAGNOSTIC] flat: 0.000155 | stairway: 0.000587
+Epoch 24/60 | Train Loss: 0.000427 | Val Loss: 0.000438 | Val MAE: 0.019606 | Val RMSE: 0.029598
+   >> [DIAGNOSTIC] flat: 0.000154 | stairway: 0.000579
+Epoch 25/60 | Train Loss: 0.000305 | Val Loss: 0.000312 | Val MAE: 0.016303 | Val RMSE: 0.024982
+   >> [DIAGNOSTIC] flat: 0.000092 | stairway: 0.000422
+Epoch 26/60 | Train Loss: 0.000299 | Val Loss: 0.000297 | Val MAE: 0.016139 | Val RMSE: 0.024356
+   >> [DIAGNOSTIC] flat: 0.000092 | stairway: 0.000399
+Epoch 27/60 | Train Loss: 0.000296 | Val Loss: 0.000299 | Val MAE: 0.016041 | Val RMSE: 0.024465
+   >> [DIAGNOSTIC] flat: 0.000090 | stairway: 0.000404
+Epoch 28/60 | Train Loss: 0.000293 | Val Loss: 0.000290 | Val MAE: 0.015780 | Val RMSE: 0.024095
+   >> [DIAGNOSTIC] flat: 0.000088 | stairway: 0.000391
+Epoch 29/60 | Train Loss: 0.000293 | Val Loss: 0.000303 | Val MAE: 0.016195 | Val RMSE: 0.024633
+   >> [DIAGNOSTIC] flat: 0.000094 | stairway: 0.000408
+Epoch 30/60 | Train Loss: 0.000288 | Val Loss: 0.000298 | Val MAE: 0.015980 | Val RMSE: 0.024433
+   >> [DIAGNOSTIC] flat: 0.000091 | stairway: 0.000402
+Epoch 31/60 | Train Loss: 0.000287 | Val Loss: 0.000307 | Val MAE: 0.016213 | Val RMSE: 0.024776
+   >> [DIAGNOSTIC] flat: 0.000095 | stairway: 0.000413
+Epoch 32/60 | Train Loss: 0.000284 | Val Loss: 0.000270 | Val MAE: 0.015235 | Val RMSE: 0.023222
+   >> [DIAGNOSTIC] flat: 0.000080 | stairway: 0.000364
+Epoch 33/60 | Train Loss: 0.000283 | Val Loss: 0.000279 | Val MAE: 0.015473 | Val RMSE: 0.023626
+   >> [DIAGNOSTIC] flat: 0.000085 | stairway: 0.000376
+Epoch 34/60 | Train Loss: 0.000280 | Val Loss: 0.000275 | Val MAE: 0.015298 | Val RMSE: 0.023474
+   >> [DIAGNOSTIC] flat: 0.000080 | stairway: 0.000373
+Epoch 35/60 | Train Loss: 0.000278 | Val Loss: 0.000273 | Val MAE: 0.015096 | Val RMSE: 0.023353
+   >> [DIAGNOSTIC] flat: 0.000075 | stairway: 0.000372
+Epoch 36/60 | Train Loss: 0.000278 | Val Loss: 0.000271 | Val MAE: 0.015092 | Val RMSE: 0.023283
+   >> [DIAGNOSTIC] flat: 0.000080 | stairway: 0.000366
+Epoch 37/60 | Train Loss: 0.000276 | Val Loss: 0.000252 | Val MAE: 0.014604 | Val RMSE: 0.022470
+   >> [DIAGNOSTIC] flat: 0.000071 | stairway: 0.000343
+Epoch 38/60 | Train Loss: 0.000274 | Val Loss: 0.000272 | Val MAE: 0.015134 | Val RMSE: 0.023337
+   >> [DIAGNOSTIC] flat: 0.000078 | stairway: 0.000369
+Epoch 39/60 | Train Loss: 0.000278 | Val Loss: 0.000243 | Val MAE: 0.014305 | Val RMSE: 0.022051
+   >> [DIAGNOSTIC] flat: 0.000071 | stairway: 0.000329
+Epoch 40/60 | Train Loss: 0.000273 | Val Loss: 0.000244 | Val MAE: 0.014266 | Val RMSE: 0.022127
+   >> [DIAGNOSTIC] flat: 0.000070 | stairway: 0.000332
+Epoch 41/60 | Train Loss: 0.000269 | Val Loss: 0.000251 | Val MAE: 0.014357 | Val RMSE: 0.022410
+   >> [DIAGNOSTIC] flat: 0.000067 | stairway: 0.000343
+Epoch 42/60 | Train Loss: 0.000270 | Val Loss: 0.000263 | Val MAE: 0.014749 | Val RMSE: 0.022949
+   >> [DIAGNOSTIC] flat: 0.000071 | stairway: 0.000359
+Epoch 43/60 | Train Loss: 0.000268 | Val Loss: 0.000237 | Val MAE: 0.014096 | Val RMSE: 0.021787
+   >> [DIAGNOSTIC] flat: 0.000064 | stairway: 0.000324
+Epoch 44/60 | Train Loss: 0.000269 | Val Loss: 0.000250 | Val MAE: 0.014447 | Val RMSE: 0.022375
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000341
+Epoch 45/60 | Train Loss: 0.000267 | Val Loss: 0.000261 | Val MAE: 0.014795 | Val RMSE: 0.022846
+   >> [DIAGNOSTIC] flat: 0.000072 | stairway: 0.000356
+Epoch 46/60 | Train Loss: 0.000266 | Val Loss: 0.000262 | Val MAE: 0.014631 | Val RMSE: 0.022890
+   >> [DIAGNOSTIC] flat: 0.000076 | stairway: 0.000355
+Epoch 47/60 | Train Loss: 0.000267 | Val Loss: 0.000250 | Val MAE: 0.014430 | Val RMSE: 0.022364
+   >> [DIAGNOSTIC] flat: 0.000068 | stairway: 0.000341
+Epoch 48/60 | Train Loss: 0.000264 | Val Loss: 0.000253 | Val MAE: 0.014633 | Val RMSE: 0.022508
+   >> [DIAGNOSTIC] flat: 0.000077 | stairway: 0.000341
+Epoch 49/60 | Train Loss: 0.000263 | Val Loss: 0.000244 | Val MAE: 0.014256 | Val RMSE: 0.022075
+   >> [DIAGNOSTIC] flat: 0.000069 | stairway: 0.000331
+Epoch 50/60 | Train Loss: 0.000210 | Val Loss: 0.000204 | Val MAE: 0.012785 | Val RMSE: 0.020221
+   >> [DIAGNOSTIC] flat: 0.000047 | stairway: 0.000283
+Epoch 51/60 | Train Loss: 0.000207 | Val Loss: 0.000210 | Val MAE: 0.012996 | Val RMSE: 0.020516
+   >> [DIAGNOSTIC] flat: 0.000049 | stairway: 0.000291
+Epoch 52/60 | Train Loss: 0.000206 | Val Loss: 0.000205 | Val MAE: 0.012785 | Val RMSE: 0.020234
+   >> [DIAGNOSTIC] flat: 0.000047 | stairway: 0.000283
+Epoch 53/60 | Train Loss: 0.000205 | Val Loss: 0.000199 | Val MAE: 0.012649 | Val RMSE: 0.019931
+   >> [DIAGNOSTIC] flat: 0.000046 | stairway: 0.000275
+Epoch 54/60 | Train Loss: 0.000204 | Val Loss: 0.000205 | Val MAE: 0.012868 | Val RMSE: 0.020256
+   >> [DIAGNOSTIC] flat: 0.000049 | stairway: 0.000283
+Epoch 55/60 | Train Loss: 0.000203 | Val Loss: 0.000205 | Val MAE: 0.012865 | Val RMSE: 0.020237
+   >> [DIAGNOSTIC] flat: 0.000049 | stairway: 0.000283
+Epoch 56/60 | Train Loss: 0.000201 | Val Loss: 0.000204 | Val MAE: 0.012824 | Val RMSE: 0.020205
+   >> [DIAGNOSTIC] flat: 0.000049 | stairway: 0.000282
+Epoch 57/60 | Train Loss: 0.000201 | Val Loss: 0.000196 | Val MAE: 0.012627 | Val RMSE: 0.019822
+   >> [DIAGNOSTIC] flat: 0.000048 | stairway: 0.000271
+Epoch 58/60 | Train Loss: 0.000200 | Val Loss: 0.000203 | Val MAE: 0.012822 | Val RMSE: 0.020169
+   >> [DIAGNOSTIC] flat: 0.000049 | stairway: 0.000280
+Early stopping at epoch 58 (no improvement for 8 epochs). Best val loss: 0.000204
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.012785 | Overall RMSE: 0.020221
+   motor_1     MAE: 0.007691   RMSE: 0.010882
+   motor_2     MAE: 0.007596   RMSE: 0.010551
+   motor_3     MAE: 0.008063   RMSE: 0.011515
+   motor_4     MAE: 0.010332   RMSE: 0.014981
+   motor_5     MAE: 0.010536   RMSE: 0.015333
+   motor_6     MAE: 0.012201   RMSE: 0.018855
+   motor_7     MAE: 0.013870   RMSE: 0.020453
+   motor_8     MAE: 0.010410   RMSE: 0.015337
+   motor_9     MAE: 0.010555   RMSE: 0.015294
+   motor_10    MAE: 0.013435   RMSE: 0.020392
+   motor_11    MAE: 0.013862   RMSE: 0.020155
+   motor_12    MAE: 0.016402   RMSE: 0.026006
+   motor_13    MAE: 0.014444   RMSE: 0.023428
+   motor_14    MAE: 0.013605   RMSE: 0.019778
+   motor_15    MAE: 0.012993   RMSE: 0.019362
+   motor_16    MAE: 0.020584   RMSE: 0.032166
+   motor_17    MAE: 0.020093   RMSE: 0.032149
+   motor_18    MAE: 0.013617   RMSE: 0.020893
+   motor_19    MAE: 0.012633   RMSE: 0.019655
+   [flat]  MAE: 0.007042   RMSE: 0.009677   (n=50000)
+   [stairway]  MAE: 0.015657   RMSE: 0.023802   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/umbc_seed_999_history.pkl
+training_time_sec:  893.521443605423
+
+============================================================
+FINAL RESULTS ACROSS ALL SEEDS
+============================================================
+ Seed  Val Loss      MAE     RMSE
+   42  0.000376 0.017841 0.027093
+  123  0.000415 0.016790 0.029581
+  456  0.000249 0.014073 0.022199
+  789  0.000221 0.013416 0.021059
+  999  0.000203 0.012785 0.020221
+------------------------------------------------------------
+Mean Val Loss: 0.000293 ± 0.000096
+Mean MAE:      0.014981 ± 0.002211
+Mean RMSE:     0.024031 ± 0.004089
+============================================================

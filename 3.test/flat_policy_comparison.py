@@ -1,6 +1,9 @@
-#python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type no_adaptive_weight
+#python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type adaptive_weight
 #python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type one_hot
 #python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type no_label
+#python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type concat
+#python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type umbc
+#python3 scripts/UMBC/3.test/flat_policy_comparison.py --policy_type expert
 
 import argparse
 import os
@@ -16,8 +19,8 @@ cli_args.add_rsl_rl_args(parser)
 AppLauncher.add_app_launcher_args(parser)
 
 # --- Added argument for policy type ---
-parser.add_argument("--policy_type", type=str, default="no_adaptive_weight",
-                    choices=["no_label", "one_hot", "no_adaptive_weight"],
+parser.add_argument("--policy_type", type=str, default="umbc",
+                    choices=["no_label", "one_hot", "adaptive_weight", "concat", "umbc", "expert"],
                     help="Select the policy architecture to test.")
 
 args_cli = parser.parse_args()
@@ -50,7 +53,7 @@ RL_LIBRARY = "rsl_rl"
 # ---------------------------------------------------------
 # POLICY ARCHITECTURES
 # ---------------------------------------------------------
-class LocomotionPolicyNoLabel(nn.Module):
+class NoLabel(nn.Module):
     def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2, embed_dim=0):
         super().__init__()
         self.proprio_net = nn.Sequential(
@@ -70,7 +73,6 @@ class LocomotionPolicyNoLabel(nn.Module):
             nn.ReLU(),
             nn.Linear(128, output_dim)
         )
-
     def forward(self, proprio, heightmap):
         h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
         z_p = self.proprio_net(proprio)
@@ -79,7 +81,7 @@ class LocomotionPolicyNoLabel(nn.Module):
         return self.final_head(combined)
 
 
-class LocomotionPolicyOneHot(nn.Module):
+class OneHot(nn.Module):
     def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2):
         super().__init__()
         self.num_terrains = num_terrains
@@ -100,7 +102,6 @@ class LocomotionPolicyOneHot(nn.Module):
             nn.ReLU(),
             nn.Linear(128, output_dim)
         )
-
     def forward(self, proprio, heightmap, terrain_label):
         h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
         z_p = self.proprio_net(proprio)
@@ -109,10 +110,24 @@ class LocomotionPolicyOneHot(nn.Module):
         combined = torch.cat((z_p, z_h, z_l), dim=1)
         return self.final_head(combined)
 
-
-class LocomotionPolicyEmbed(nn.Module):
+class Concat(nn.Module):
     def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2, embed_dim=8):
         super().__init__()
+        self.terrain_embed = nn.Embedding(2, 8)        
+        self.final_head = nn.Sequential(
+            nn.Linear(proprio_dim + heightmap_dim + embed_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, output_dim)
+        )
+    def forward(self, proprio, heightmap, terrain_label):
+        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
+        z_l = self.terrain_embed(terrain_label.long())
+        combined = torch.cat((proprio, h_ordered, z_l), dim=1)
+        return self.final_head(combined)
+
+class UMBC(nn.Module):
+    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19):
+        super().__init__()        
         self.proprio_net = nn.Sequential(
             nn.Linear(proprio_dim, 256),
             nn.LeakyReLU(0.5),
@@ -125,22 +140,21 @@ class LocomotionPolicyEmbed(nn.Module):
             nn.Linear(128, 64),
             nn.ReLU()
         )
-        self.terrain_embed = nn.Embedding(num_terrains, embed_dim)
+        self.terrain_embed = nn.Embedding(2, 8)        
         self.final_head = nn.Sequential(
-            nn.Linear(128 + 64 + embed_dim, 128),
+            nn.Linear(128 + 64 + 8, 128),
             nn.ReLU(),
             nn.Linear(128, output_dim)
         )
-
     def forward(self, proprio, heightmap, terrain_label):
         h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
         z_p = self.proprio_net(proprio)
         z_h = self.perception_net(h_ordered)
         z_l = self.terrain_embed(terrain_label.long())
-        combined = torch.cat((z_p, z_h, z_l), dim=1)
+        combined = torch.cat((z_p, z_h, z_l), dim=1)   
         return self.final_head(combined)
-# ---------------------------------------------------------
 
+# ---------------------------------------------------------
 
 class H1FlatDemo:
     def __init__(self):
@@ -150,7 +164,16 @@ class H1FlatDemo:
         env_cfg.scene.num_envs = 1
         env_cfg.curriculum = None
         env_cfg.episode_length_s = 5
-        env_cfg.commands.base_velocity.ranges.lin_vel_x = (0.5, 1.0) 
+
+        if hasattr(env_cfg, "events") and hasattr(env_cfg.events, "reset_base"):
+            env_cfg.events.reset_base.params["pose_range"] = {
+                "x": (-0.5, 0.5),     # Randomize X offset by ±0.5 meters
+                "y": (-0.5, 0.5),     # Randomize Y offset by ±0.5 meters
+                "yaw": (-3.14, 3.14)  # Randomize starting rotation (full 360 degrees)
+            }            
+        env_cfg.scene.robot.init_state.pos = (0.0, 0.0, 1.05) 
+        env_cfg.scene.robot.init_state.rot = (1.0, 0.0, 0.0, 0.0) # Identity quaternion (facing straight ahead)
+        env_cfg.commands.base_velocity.ranges.lin_vel_x = (0.5, 1.0)
         env_cfg.commands.base_velocity.ranges.lin_vel_y = (0.0, 0.0)
         env_cfg.commands.base_velocity.ranges.ang_vel_z = (0.0, 0.0)
         
@@ -161,18 +184,30 @@ class H1FlatDemo:
         
         # --- Instantiate Model and Load Weights Based on Arg ---
         if args_cli.policy_type == "no_label":
-            self.policy = LocomotionPolicyNoLabel().to(device)
-            weights_path = 'scripts/UMBC/logs/models/unified_policy_nolabel.pth'
+            self.policy = NoLabel().to(device)
+            weights_path = 'scripts/UMBC/logs/models/nolabel.pth'
         elif args_cli.policy_type == "one_hot":
-            self.policy = LocomotionPolicyOneHot().to(device)
-            weights_path = 'scripts/UMBC/logs/models/unified_policy_one_hot.pth'
-        else: # no adaptive learning / terrain_embed
-            self.policy = LocomotionPolicyEmbed().to(device)
-            weights_path = 'scripts/UMBC/logs/models/unified_policy_no_adaptive_weighting.pth'
+            self.policy = OneHot().to(device)
+            weights_path = 'scripts/UMBC/logs/models/1hot.pth'
+        elif args_cli.policy_type == "adaptive_weight":
+            self.policy = UMBC().to(device)
+            weights_path = 'scripts/UMBC/logs/models/adaptive_weight.pth'
+        elif args_cli.policy_type == "concat":
+            self.policy = Concat().to(device)
+            weights_path = 'scripts/UMBC/logs/models/concat.pth'
+        elif args_cli.policy_type == "umbc":
+            self.policy = UMBC().to(device)
+            weights_path = 'scripts/UMBC/logs/models/umbc.pth'
+        else:
+            weights_path = "scripts/UMBC/logs/models/drl_flat.pt"
+            ppo_runner = OnPolicyRunner(self.env, agent_cfg.to_dict(), log_dir=None, device=self.device)
+            ppo_runner.load(weights_path)
+            self.policy = ppo_runner.get_inference_policy(device=self.device)
             
         print(f"Loading weights for {args_cli.policy_type} from: {weights_path}")
-        self.policy.load_state_dict(torch.load(weights_path, weights_only=False))
-        self.policy.eval()
+        if args_cli.policy_type != "expert":
+          self.policy.load_state_dict(torch.load(weights_path, weights_only=False))
+          self.policy.eval()
         
         self.create_camera()
         self.commands = torch.zeros(env_cfg.scene.num_envs, 4, device=self.device)
@@ -266,13 +301,16 @@ def main():
     
     demo_h1 = H1FlatDemo()
     obs, _ = demo_h1.env.reset()
-    
     number_envs = 1
 
     with open("scripts/UMBC/logs/models/terrain_mapping.json") as f:
         terrain_to_index = json.load(f)
     terrain_id = terrain_to_index["flat"]
     print(f"Terrain ID: {terrain_id}")
+
+    # print linear velocity
+    current_cmd = demo_h1.env.unwrapped.command_manager.get_command("base_velocity")
+    print(f"Current Target Forward Velocity: {current_cmd[0, 0].item()} m/s")
 
     terrain = torch.full((number_envs,), terrain_id, device='cuda:0', dtype=torch.long)
     height = torch.full((number_envs, 187), 0, device='cuda:0', dtype=torch.float32)
@@ -283,6 +321,8 @@ def main():
             # --- Dynamic Action Call Based on Policy Type ---
             if args_cli.policy_type == "no_label":
                 action = demo_h1.policy(obs, height)
+            elif args_cli.policy_type == "expert":
+                action = demo_h1.policy(obs)
             else:
                 action = demo_h1.policy(obs, height, terrain)            
                 
@@ -295,18 +335,26 @@ def main():
                     else:
                         reward_split.setdefault(k, []).append(info['log'][k])
                         
+                print(sum(reward_list))
                 rewards.append(reward_list)
-                if len(rewards) == 1:
-                    break
                 reward_list = []
                 print(f"Episode {len(rewards)} over!")
+                
+                if len(rewards) == 20:
+                    break
+
+                # change linear velocity
+                env_ids = torch.tensor([0], device=demo_h1.device)
+                demo_h1.env.unwrapped.command_manager.reset(env_ids=env_ids)
+                current_cmd = demo_h1.env.unwrapped.command_manager.get_command("base_velocity")
+                print(f"Current Target Forward Velocity: {current_cmd[0, 0].item()} m/s")
             else:
-                reward_list.append(reward)
+                reward_list.append(reward[0].item())
 
     results = {'rewards': rewards, 'individual_rewards': reward_split}
     
     # --- Dynamic Output File Naming ---
-    output_filename = f"scripts/UMBC/logs/metrics/flat_{args_cli.policy_type}_policy.pkl"
+    output_filename = f"scripts/UMBC/logs/metrics/test_flat_{args_cli.policy_type}_policy.pkl"
     os.makedirs(os.path.dirname(output_filename), exist_ok=True)
     with open(output_filename, "wb") as f:
         pickle.dump(results, f)
