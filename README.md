@@ -1,5 +1,9 @@
 # A Semantic-Conditioned Multi-Modal Behavior Cloning Framework for Terrain-Specific Behavior Isolation in Humanoid Locomotion
 
+<p align="center">
+  <img src="logs/images/1.umbc_framework.png" alt="UMBC Framework - Graphical Abstract" width="100%">
+</p>
+
 Official repository for the research paper: **"A Semantic-Conditioned Multi-Modal Behavior Cloning Framework for Terrain-Specific Behavior Isolation in Humanoid Locomotion"**.
 
 This repository provides complete implementations for **expert trajectory collection**, **unified policy training**, **offline evaluation**, **closed-loop simulation in NVIDIA Isaac Lab**, and **paper figure/table reproduction** for the Unitree H1 humanoid robot.
