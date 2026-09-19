@@ -1,15 +1,12 @@
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type adaptive_weight
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type one_hot
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type no_label
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type concat
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type umbc
-#python3 scripts/UMBC/3.test/stairway_policy_comparison.py --policy_type expert
-
+# correct label
+# python3 scripts/UMBC/3.test/umbc_stairway_ablation.py
+# incorrect label
+# python3 scripts/UMBC/3.test/umbc_stairway_ablation.py --terrain_id 0
 
 import argparse
 import os
 import sys
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../.."))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../../.."))
 import scripts.reinforcement_learning.rsl_rl.cli_args as cli_args  # isort: skip
 from isaaclab.app import AppLauncher
 
@@ -19,10 +16,13 @@ parser = argparse.ArgumentParser(
 cli_args.add_rsl_rl_args(parser)
 AppLauncher.add_app_launcher_args(parser)
 
-# --- Added argument for policy type ---
-parser.add_argument("--policy_type", type=str, default="umbc",
-                    choices=["no_label", "one_hot", "adaptive_weight", "concat", "umbc", "expert"],
-                    help="Select the policy architecture to test.")
+# --- Added arguments for ablation and tracking ---
+parser.add_argument("--terrain_id", type=int, default=None,
+                    help="Override the terrain ID. If not set, defaults to the 'stairway' mapping from JSON.")
+parser.add_argument("--num_episodes", type=int, default=20,
+                    help="Number of episodes to run before reporting fall statistics.")
+parser.add_argument("--fall_key", type=str, default="Episode_Termination/base_contact",
+                    help="Key in info['log'] used to identify a fall.")
 
 args_cli = parser.parse_args()
 app_launcher = AppLauncher(args_cli)
@@ -31,7 +31,6 @@ simulation_app = app_launcher.app
 """Rest everything follows."""
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import carb
 import omni
 from omni.kit.viewport.utility import get_viewport_from_window_name
@@ -51,113 +50,7 @@ import json
 TASK = "Isaac-Stairway-H1-Play-v0"
 RL_LIBRARY = "rsl_rl"
 
-# ---------------------------------------------------------
-# POLICY ARCHITECTURES
-# ---------------------------------------------------------
-class NoLabel(nn.Module):
-    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2, embed_dim=0):
-        super().__init__()
-        self.proprio_net = nn.Sequential(
-            nn.Linear(proprio_dim, 256),
-            nn.LeakyReLU(0.5),
-            nn.Linear(256, 128),
-            nn.ReLU()
-        )
-        self.perception_net = nn.Sequential(
-            nn.Linear(heightmap_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU()
-        )
-        self.final_head = nn.Sequential(
-            nn.Linear(128 + 64 + embed_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, output_dim)
-        )
-    def forward(self, proprio, heightmap):
-        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
-        z_p = self.proprio_net(proprio)
-        z_h = self.perception_net(h_ordered)
-        combined = torch.cat((z_p, z_h), dim=1)
-        return self.final_head(combined)
-
-
-class OneHot(nn.Module):
-    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2):
-        super().__init__()
-        self.num_terrains = num_terrains
-        self.proprio_net = nn.Sequential(
-            nn.Linear(proprio_dim, 256),
-            nn.LeakyReLU(0.5),
-            nn.Linear(256, 128),
-            nn.ReLU()
-        )
-        self.perception_net = nn.Sequential(
-            nn.Linear(heightmap_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU()
-        )
-        self.final_head = nn.Sequential(
-            nn.Linear(128 + 64 + num_terrains, 128),
-            nn.ReLU(),
-            nn.Linear(128, output_dim)
-        )
-    def forward(self, proprio, heightmap, terrain_label):
-        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
-        z_p = self.proprio_net(proprio)
-        z_h = self.perception_net(h_ordered)
-        z_l = F.one_hot(terrain_label.long(), num_classes=self.num_terrains).float()
-        combined = torch.cat((z_p, z_h, z_l), dim=1)
-        return self.final_head(combined)
-
-class Concat(nn.Module):
-    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19, num_terrains=2, embed_dim=8):
-        super().__init__()
-        self.terrain_embed = nn.Embedding(2, 8)        
-        self.final_head = nn.Sequential(
-            nn.Linear(proprio_dim + heightmap_dim + embed_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, output_dim)
-        )
-    def forward(self, proprio, heightmap, terrain_label):
-        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
-        z_l = self.terrain_embed(terrain_label.long())
-        combined = torch.cat((proprio, h_ordered, z_l), dim=1)
-        return self.final_head(combined)
-
-class UMBC(nn.Module):
-    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19):
-        super().__init__()        
-        self.proprio_net = nn.Sequential(
-            nn.Linear(proprio_dim, 256),
-            nn.LeakyReLU(0.5),
-            nn.Linear(256, 128),
-            nn.ReLU()
-        )
-        self.perception_net = nn.Sequential(
-            nn.Linear(heightmap_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU()
-        )
-        self.terrain_embed = nn.Embedding(2, 8)        
-        self.final_head = nn.Sequential(
-            nn.Linear(128 + 64 + 8, 128),
-            nn.ReLU(),
-            nn.Linear(128, output_dim)
-        )
-    def forward(self, proprio, heightmap, terrain_label):
-        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
-        z_p = self.proprio_net(proprio)
-        z_h = self.perception_net(h_ordered)
-        z_l = self.terrain_embed(terrain_label.long())
-        combined = torch.cat((z_p, z_h, z_l), dim=1)   
-        return self.final_head(combined)
-
-# ---------------------------------------------------------
-
-class H1StairDemo:
+class H1Stairway:
     def __init__(self):
         agent_cfg: RslRlOnPolicyRunnerCfg = cli_args.parse_rsl_rl_cfg(TASK, args_cli)
         checkpoint = get_published_pretrained_checkpoint(RL_LIBRARY, TASK)
@@ -181,48 +74,31 @@ class H1StairDemo:
             if terrain_key in sub_terrains:
                 sub_terrains[terrain_key].border_width = DESIRED_SUB_TERRAIN_BORDER_WIDTH
         
+        # ---------------------------------------------------------
+        # LOCAL OVERRIDE: Randomize Spawn Locations on Reset
+        # ---------------------------------------------------------
+        # Re-enable pose randomization which is normally disabled in PLAY mode.
         if hasattr(env_cfg, "events") and hasattr(env_cfg.events, "reset_base"):
             env_cfg.events.reset_base.params["pose_range"] = {
                 "x": (-0.5, 0.5),     # Randomize X offset by ±0.5 meters
                 "y": (-0.5, 0.5),     # Randomize Y offset by ±0.5 meters
                 "yaw": (-3.14, 3.14)  # Randomize starting rotation (full 360 degrees)
             }
+
+        # 1. Set forward speed (X) to your desired range
         env_cfg.commands.base_velocity.ranges.lin_vel_x = (0.5, 1.0)
+        # 2. Force lateral velocity (Y) to zero
         env_cfg.commands.base_velocity.ranges.lin_vel_y = (0.0, 0.0)
+        # 3. Force heading/yaw rate to zero to prevent turning
         env_cfg.commands.base_velocity.ranges.ang_vel_z = (0.0, 0.0)
 
         self.env = RslRlVecEnvWrapper(ManagerBasedRLEnv(cfg=env_cfg))
         self.device = self.env.unwrapped.device
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         print(f"Using {device} device")
-        
-        # --- Instantiate Model and Load Weights Based on Arg ---
-        if args_cli.policy_type == "no_label":
-            self.policy = NoLabel().to(device)
-            weights_path = 'scripts/UMBC/logs/models/nolabel.pth'
-        elif args_cli.policy_type == "one_hot":
-            self.policy = OneHot().to(device)
-            weights_path = 'scripts/UMBC/logs/models/1hot.pth'
-        elif args_cli.policy_type == "adaptive_weight":
-            self.policy = UMBC().to(device)
-            weights_path = 'scripts/UMBC/logs/models/adaptive_weight.pth'
-        elif args_cli.policy_type == "concat":
-            self.policy = Concat().to(device)
-            weights_path = 'scripts/UMBC/logs/models/concat.pth'
-        elif args_cli.policy_type == "umbc":
-            self.policy = UMBC().to(device)
-            weights_path = 'scripts/UMBC/logs/models/umbc.pth'
-        else:
-            weights_path = "scripts/UMBC/logs/models/drl_stairway.pt"
-            ppo_runner = OnPolicyRunner(self.env, agent_cfg.to_dict(), log_dir=None, device=self.device)
-            ppo_runner.load(weights_path)
-            self.policy = ppo_runner.get_inference_policy(device=self.device)
-            
-        print(f"Loading weights for {args_cli.policy_type} from: {weights_path}")
-        if args_cli.policy_type != "expert":
-          self.policy.load_state_dict(torch.load(weights_path, weights_only=False))
-          self.policy.eval() 
-               
+        self.policy = LocomotionPolicy().to(device)
+        self.policy.load_state_dict(torch.load('scripts/UMBC/logs/models/umbc.pth', weights_only=False))        
+        self.policy.eval()
         self.create_camera()
         self.set_up_keyboard()
         self._prim_selection = omni.usd.get_context().get_selection()
@@ -306,79 +182,131 @@ class H1StairDemo:
         camera_state.set_position_world(eye, True)
         camera_state.set_target_world(target, True)
 
+class LocomotionPolicy(nn.Module):
+    def __init__(self, proprio_dim=69, heightmap_dim=187, output_dim=19):
+        super().__init__()        
+        self.proprio_net = nn.Sequential(
+            nn.Linear(proprio_dim, 256),
+            nn.LeakyReLU(0.5),
+            nn.Linear(256, 128),
+            nn.ReLU()
+        )
+        self.perception_net = nn.Sequential(
+            nn.Linear(heightmap_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU()
+        )
+        self.terrain_embed = nn.Embedding(2, 8)        
+        self.final_head = nn.Sequential(
+            nn.Linear(128 + 64 + 8, 128),
+            nn.ReLU(),
+            nn.Linear(128, output_dim)
+        )
+    def forward(self, proprio, heightmap, terrain_label):
+        h_ordered = heightmap.view(-1, 11, 17).transpose(1, 2).flatten(1)
+        z_p = self.proprio_net(proprio)
+        z_h = self.perception_net(h_ordered)
+        z_l = self.terrain_embed(terrain_label.long())
+        combined = torch.cat((z_p, z_h, z_l), dim=1)   
+        return self.final_head(combined)
+
 def main():
     rewards = []
     reward_list = []
     reward_split = {}  # built dynamically from info['log'] on first episode end
 
-    demo_h1 = H1StairDemo()
+    demo_h1 = H1Stairway()
     obs, _ = demo_h1.env.reset()
+    print("root height right after reset:", demo_h1.env.unwrapped.scene["robot"].data.root_pos_w[:, 2].item())
+
     number_envs = 1
 
-    with open("scripts/UMBC/logs/models/terrain_mapping.json") as f:
-        terrain_to_index = json.load(f)
-    terrain_id = terrain_to_index["stairway"]
-    print(f"Terrain ID: {terrain_id}")
+    # --- Terrain logic using the argument ---
+    if args_cli.terrain_id is not None:
+        terrain_id = args_cli.terrain_id
+        print(f"Using command-line terrain ID override (Ablation Mode): {terrain_id}")
+    else:
+        with open("scripts/UMBC/logs/models/terrain_mapping.json") as f:
+            terrain_to_index = json.load(f)
+        terrain_id = terrain_to_index["stairway"]
+        print(f"Using default correct terrain ID from mapping: {terrain_id}")
 
     # print linear velocity
     current_cmd = demo_h1.env.unwrapped.command_manager.get_command("base_velocity")
     print(f"Current Target Forward Velocity: {current_cmd[0, 0].item()} m/s")
 
     terrain = torch.full((number_envs,), terrain_id, device='cuda:0', dtype=torch.long)
-    
+
+    # --- Tracking state ---
+    fall_count = 0
+    fall_flags = []
+
     while simulation_app.is_running():
         demo_h1.update_selected_object()
         with torch.inference_mode():
             height = obs[:, 69:]
             obs_proprio = obs[:, :69]
-            
-            # --- Dynamic Action Call Based on Policy Type ---
-            if args_cli.policy_type == "no_label":
-                action = demo_h1.policy(obs_proprio, height)
-            elif args_cli.policy_type == "expert":
-                action = demo_h1.policy(obs)
-            else:
-                action = demo_h1.policy(obs_proprio, height, terrain)            
-                
+            action = demo_h1.policy(obs_proprio, height, terrain)
             obs, reward, done, info = demo_h1.env.step(action)
             
-            if done[0] == 1:  # reset
+            if done[0] != 0:  # reset
                 for k, v in info['log'].items():
-                    reward_split.setdefault(k, []).append(v)
+                    if k in reward_split:
+                        reward_split[k].append(v)
+                    else:
+                        reward_split.setdefault(k, []).append(v)
+                
+                # Check for base contact falls
+                fell = float(info['log'].get(args_cli.fall_key, 0.0)) > 0
+                fall_flags.append(fell)
+                if fell:
+                    fall_count += 1
 
                 print(sum(reward_list))
                 rewards.append(reward_list)
-                reward_list = []
-                print(f"Episode {len(rewards)} over!")
-
-                if len(rewards) == 20:
+                print(f"Episode {len(rewards)} over! Fell: {fell}")
+                
+                if len(rewards) >= args_cli.num_episodes:
                     break
 
                 # change linear velocity
                 env_ids = torch.tensor([0], device=demo_h1.device)
                 demo_h1.env.unwrapped.command_manager.reset(env_ids=env_ids)
                 current_cmd = demo_h1.env.unwrapped.command_manager.get_command("base_velocity")
-                print(f"Current Target Forward Velocity: {current_cmd[0, 0].item()} m/s")
+                print(f"Current Target Forward Velocity: {current_cmd[0, 0].item()} m/s")                
+                reward_list = []
             else:
                 reward_list.append(reward[0].item())
 
-    results = {'rewards': rewards, 'individual_rewards': reward_split}
+    results = {
+        'rewards': rewards, 
+        'individual_rewards': reward_split,
+        'fall_count': fall_count,
+        'fall_flags': fall_flags
+    }
     
-    # --- Dynamic Output File Naming ---
-    output_filename = f"scripts/UMBC/logs/metrics/test_stairway_{args_cli.policy_type}_policy.pkl"
-    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
-    with open(output_filename, "wb") as f:
-        pickle.dump(results, f)
-        
+    os.makedirs("scripts/UMBC/logs/metrics", exist_ok=True)
+    
+    if args_cli.terrain_id is not None:
+        with open("scripts/UMBC/logs/metrics/test_ablation_stairway_wrong_label.pkl", "wb") as f:
+            pickle.dump(results, f)
+    else:
+        with open("scripts/UMBC/logs/metrics/test_ablation_stairway_correct_label.pkl", "wb") as f:
+            pickle.dump(results, f)
+
     print('===============')
-    print(f'Stairway Terrain - Policy: {args_cli.policy_type}')
+    print(f'UMBC on stairway terrain (Terrain ID: {terrain_id})')
     print('===============')
-    print('Length of episode: ', [len(reward) for reward in rewards])
-    print('Average length of episode: ', sum([len(reward) for reward in rewards]) / len(rewards))
-    print('Number of episode: ', len(rewards))
-    print('Per episode reward: ', [sum(reward) for reward in rewards])
-    print('Average reward: ', sum([sum(reward) for reward in rewards]) / len(rewards))
-    print('Total reward: ', sum([sum(reward) for reward in rewards]), '\n\n')
+    print('Number of episodes: ', len(rewards))
+    print('Fall count: ', fall_count)
+    if len(rewards) > 0:
+        print('Fall rate: ', fall_count / len(rewards))
+        print('Length of episode: ', [len(r) for r in rewards])
+        print('Average length of episode: ', sum(len(r) for r in rewards) / len(rewards))
+        print('Per episode reward: ', [sum(r) for r in rewards])
+        print('Average reward: ', sum(sum(r) for r in rewards) / len(rewards))
+        print('Total reward: ', sum(sum(r) for r in rewards), '\n\n')
 
 if __name__ == "__main__":
     main()

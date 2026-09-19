@@ -1,0 +1,80 @@
+$ python3 scripts/ulbc_v2/3.test/flat_policy_comparison.py --policy_type adaptive_weight
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Loading weights for adaptive_weight from: scripts/ulbc_v2/logs/models/adaptive_weight.pth
+Terrain ID: 0
+Current Target Forward Velocity: 0.8054364919662476 m/s
+9.177832561836112
+Episode 1 over!
+Current Target Forward Velocity: 0.5625488758087158 m/s
+9.262086583767086
+Episode 2 over!
+Current Target Forward Velocity: 0.6869282722473145 m/s
+9.243664279696532
+Episode 3 over!
+Current Target Forward Velocity: 0.5627535581588745 m/s
+9.335284502711147
+Episode 4 over!
+Current Target Forward Velocity: 0.9798585772514343 m/s
+4.248251931567211
+Episode 5 over!
+Current Target Forward Velocity: 0.6251271963119507 m/s
+9.23066378175281
+Episode 6 over!
+Current Target Forward Velocity: 0.6607238054275513 m/s
+9.359691004268825
+Episode 7 over!
+Current Target Forward Velocity: 0.843203067779541 m/s
+9.198165405439795
+Episode 8 over!
+Current Target Forward Velocity: 0.5923590064048767 m/s
+9.304216805147007
+Episode 9 over!
+Current Target Forward Velocity: 0.9766025543212891 m/s
+7.021031784126535
+Episode 10 over!
+Current Target Forward Velocity: 0.8050233125686646 m/s
+9.080602299189195
+Episode 11 over!
+Current Target Forward Velocity: 0.6719287633895874 m/s
+9.283305804710835
+Episode 12 over!
+Current Target Forward Velocity: 0.6728139519691467 m/s
+9.32285675406456
+Episode 13 over!
+Current Target Forward Velocity: 0.7712533473968506 m/s
+9.27054639509879
+Episode 14 over!
+Current Target Forward Velocity: 0.887360692024231 m/s
+9.145694150356576
+Episode 15 over!
+Current Target Forward Velocity: 0.7304722666740417 m/s
+3.8181302168231923
+Episode 16 over!
+Current Target Forward Velocity: 0.5674991607666016 m/s
+9.38750329008326
+Episode 17 over!
+Current Target Forward Velocity: 0.8131940364837646 m/s
+9.217619874281809
+Episode 18 over!
+Current Target Forward Velocity: 0.6072685122489929 m/s
+9.225027831504121
+Episode 19 over!
+Current Target Forward Velocity: 0.5906252264976501 m/s
+9.353320030961186
+Episode 20 over!
+===============
+Unified on flat terrain - Policy: adaptive_weight
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Number of episode:  20
+Per episode reward:  [9.177832561836112, 9.262086583767086, 9.243664279696532, 9.335284502711147, 4.248251931567211, 9.23066378175281, 9.359691004268825, 9.198165405439795, 9.304216805147007, 7.021031784126535, 9.080602299189195, 9.283305804710835, 9.32285675406456, 9.27054639509879, 9.145694150356576, 3.8181302168231923, 9.38750329008326, 9.217619874281809, 9.225027831504121, 9.353320030961186]
+Average reward:  8.624274764369328
+Total reward:  172.48549528738658 
+
+
+2026-09-11 12:49:49 [220,237ms] [Warning] [isaaclab.sim.simulation_context] Simulation is stopped. The app will keep running with physics disabled. Press Ctrl+C or close the window to exit the app.
+

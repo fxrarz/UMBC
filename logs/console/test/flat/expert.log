@@ -1,0 +1,95 @@
+$ python3 scripts/ulbc_v2/3.test/flat_policy_comparison.py --policy_type expert
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Actor MLP: Sequential(
+  (0): Linear(in_features=69, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=19, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=69, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Loading weights for expert from: scripts/ulbc_v2/logs/models/drl_flat.pt
+Terrain ID: 0
+Current Target Forward Velocity: 0.5258074402809143 m/s
+9.49757777992636
+Episode 1 over!
+Current Target Forward Velocity: 0.7022771239280701 m/s
+9.416149326600134
+Episode 2 over!
+Current Target Forward Velocity: 0.5986901521682739 m/s
+9.418711832724512
+Episode 3 over!
+Current Target Forward Velocity: 0.9573112726211548 m/s
+9.111175481695682
+Episode 4 over!
+Current Target Forward Velocity: 0.9205455780029297 m/s
+9.111703621892957
+Episode 5 over!
+Current Target Forward Velocity: 0.5836969614028931 m/s
+9.48570468928665
+Episode 6 over!
+Current Target Forward Velocity: 0.9461435079574585 m/s
+9.138846610498149
+Episode 7 over!
+Current Target Forward Velocity: 0.6254188418388367 m/s
+9.211050137877464
+Episode 8 over!
+Current Target Forward Velocity: 0.9049385786056519 m/s
+9.169271317892708
+Episode 9 over!
+Current Target Forward Velocity: 0.6694388389587402 m/s
+9.438945358153433
+Episode 10 over!
+Current Target Forward Velocity: 0.5579119324684143 m/s
+9.459138591773808
+Episode 11 over!
+Current Target Forward Velocity: 0.5978030562400818 m/s
+9.49260241072625
+Episode 12 over!
+Current Target Forward Velocity: 0.6323034763336182 m/s
+9.457222247496247
+Episode 13 over!
+Current Target Forward Velocity: 0.892453134059906 m/s
+9.19276112310763
+Episode 14 over!
+Current Target Forward Velocity: 0.7530533075332642 m/s
+9.37632694398053
+Episode 15 over!
+Current Target Forward Velocity: 0.8826441764831543 m/s
+9.261872076895088
+Episode 16 over!
+Current Target Forward Velocity: 0.6043825745582581 m/s
+9.334069022908807
+Episode 17 over!
+Current Target Forward Velocity: 0.6262712478637695 m/s
+9.457959660794586
+Episode 18 over!
+Current Target Forward Velocity: 0.9795887470245361 m/s
+9.071456273901276
+Episode 19 over!
+Current Target Forward Velocity: 0.5448083281517029 m/s
+9.491955668665469
+Episode 20 over!
+===============
+Unified on flat terrain - Policy: expert
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Number of episode:  20
+Per episode reward:  [9.49757777992636, 9.416149326600134, 9.418711832724512, 9.111175481695682, 9.111703621892957, 9.48570468928665, 9.138846610498149, 9.211050137877464, 9.169271317892708, 9.438945358153433, 9.459138591773808, 9.49260241072625, 9.457222247496247, 9.19276112310763, 9.37632694398053, 9.261872076895088, 9.334069022908807, 9.457959660794586, 9.071456273901276, 9.491955668665469]
+Average reward:  9.329725008839887
+Total reward:  186.59450017679774 
+

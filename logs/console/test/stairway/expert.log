@@ -1,0 +1,95 @@
+$ python3 scripts/ulbc_v2/3.test/stairway_policy_comparison.py --policy_type expert
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Actor MLP: Sequential(
+  (0): Linear(in_features=256, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=19, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=256, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+Loading weights for expert from: scripts/ulbc_v2/logs/models/drl_stairway.pt
+Terrain ID: 1
+Current Target Forward Velocity: 0.7209528684616089 m/s
+9.127621488180012
+Episode 1 over!
+Current Target Forward Velocity: 0.8361278772354126 m/s
+9.144387922715396
+Episode 2 over!
+Current Target Forward Velocity: 0.5244930982589722 m/s
+9.374547807499766
+Episode 3 over!
+Current Target Forward Velocity: 0.7308945655822754 m/s
+9.121750999591313
+Episode 4 over!
+Current Target Forward Velocity: 0.801232099533081 m/s
+9.15869259252213
+Episode 5 over!
+Current Target Forward Velocity: 0.5241042971611023 m/s
+9.325618023052812
+Episode 6 over!
+Current Target Forward Velocity: 0.6625748872756958 m/s
+9.248241178691387
+Episode 7 over!
+Current Target Forward Velocity: 0.6616252064704895 m/s
+9.22400446049869
+Episode 8 over!
+Current Target Forward Velocity: 0.6626102924346924 m/s
+9.252884546294808
+Episode 9 over!
+Current Target Forward Velocity: 0.5206977725028992 m/s
+9.421885987743735
+Episode 10 over!
+Current Target Forward Velocity: 0.7353454232215881 m/s
+9.097510748775676
+Episode 11 over!
+Current Target Forward Velocity: 0.7055246829986572 m/s
+9.157342521473765
+Episode 12 over!
+Current Target Forward Velocity: 0.5185176134109497 m/s
+9.423169812187552
+Episode 13 over!
+Current Target Forward Velocity: 0.8033435940742493 m/s
+9.146301624365151
+Episode 14 over!
+Current Target Forward Velocity: 0.5529813766479492 m/s
+9.324228174984455
+Episode 15 over!
+Current Target Forward Velocity: 0.6865085959434509 m/s
+9.231518691405654
+Episode 16 over!
+Current Target Forward Velocity: 0.8836758136749268 m/s
+9.061659241095185
+Episode 17 over!
+Current Target Forward Velocity: 0.8513200879096985 m/s
+8.9565195934847
+Episode 18 over!
+Current Target Forward Velocity: 0.7900938391685486 m/s
+9.172583654522896
+Episode 19 over!
+Current Target Forward Velocity: 0.7865212559700012 m/s
+9.17388221481815
+Episode 20 over!
+===============
+Stairway Terrain - Policy: expert
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Number of episode:  20
+Per episode reward:  [9.127621488180012, 9.144387922715396, 9.374547807499766, 9.121750999591313, 9.15869259252213, 9.325618023052812, 9.248241178691387, 9.22400446049869, 9.252884546294808, 9.421885987743735, 9.097510748775676, 9.157342521473765, 9.423169812187552, 9.146301624365151, 9.324228174984455, 9.231518691405654, 9.061659241095185, 8.9565195934847, 9.172583654522896, 9.17388221481815]
+Average reward:  9.207217564195162
+Total reward:  184.14435128390323 
+

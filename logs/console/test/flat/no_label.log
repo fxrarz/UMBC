@@ -1,0 +1,77 @@
+$ python3 scripts/ulbc_v2/3.test/flat_policy_comparison.py --policy_type no_label
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Loading weights for no_label from: scripts/ulbc_v2/logs/models/nolabel.pth
+Terrain ID: 0
+Current Target Forward Velocity: 0.8829262256622314 m/s
+7.771306783310138
+Episode 1 over!
+Current Target Forward Velocity: 0.9089063405990601 m/s
+7.682751629734412
+Episode 2 over!
+Current Target Forward Velocity: 0.5283376574516296 m/s
+8.627687716158107
+Episode 3 over!
+Current Target Forward Velocity: 0.7492814660072327 m/s
+8.422472495236434
+Episode 4 over!
+Current Target Forward Velocity: 0.5775763392448425 m/s
+8.961664258269593
+Episode 5 over!
+Current Target Forward Velocity: 0.7576842308044434 m/s
+8.202438411593903
+Episode 6 over!
+Current Target Forward Velocity: 0.9897760152816772 m/s
+8.463604442658834
+Episode 7 over!
+Current Target Forward Velocity: 0.5741228461265564 m/s
+8.92230336042121
+Episode 8 over!
+Current Target Forward Velocity: 0.7498158812522888 m/s
+8.438811348722083
+Episode 9 over!
+Current Target Forward Velocity: 0.9464998245239258 m/s
+2.432466917554848
+Episode 10 over!
+Current Target Forward Velocity: 0.8876286745071411 m/s
+8.101406619010959
+Episode 11 over!
+Current Target Forward Velocity: 0.9341398477554321 m/s
+6.635135087824892
+Episode 12 over!
+Current Target Forward Velocity: 0.5107911825180054 m/s
+8.615354565437883
+Episode 13 over!
+Current Target Forward Velocity: 0.5326961874961853 m/s
+8.89872972946614
+Episode 14 over!
+Current Target Forward Velocity: 0.9802716374397278 m/s
+7.8807998527772725
+Episode 15 over!
+Current Target Forward Velocity: 0.8151557445526123 m/s
+7.590483088570181
+Episode 16 over!
+Current Target Forward Velocity: 0.9378883242607117 m/s
+8.359974795137532
+Episode 17 over!
+Current Target Forward Velocity: 0.8307614326477051 m/s
+8.318491766163788
+Episode 18 over!
+Current Target Forward Velocity: 0.7009313702583313 m/s
+9.10458280541934
+Episode 19 over!
+Current Target Forward Velocity: 0.6779489517211914 m/s
+8.713427427690476
+Episode 20 over!
+===============
+Unified on flat terrain - Policy: no_label
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 198, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  246.45
+Number of episode:  20
+Per episode reward:  [7.771306783310138, 7.682751629734412, 8.627687716158107, 8.422472495236434, 8.961664258269593, 8.202438411593903, 8.463604442658834, 8.92230336042121, 8.438811348722083, 2.432466917554848, 8.101406619010959, 6.635135087824892, 8.615354565437883, 8.89872972946614, 7.8807998527772725, 7.590483088570181, 8.359974795137532, 8.318491766163788, 9.10458280541934, 8.713427427690476]
+Average reward:  8.007194655057901
+Total reward:  160.14389310115803 
+

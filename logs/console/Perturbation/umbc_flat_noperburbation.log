@@ -1,0 +1,301 @@
+$ python3 scripts/ulbc_v2/3.test/unified_flat_perturbation.py --push_force 0 --push_interval 10 --push_duration 10
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Pushing default root body: pelvis (pass --push_body_name to target a different link)
+0
+[step 10] Applying push: 0.0 N at angle 11.3 deg
+[step 30] Applying push: 0.0 N at angle 55.1 deg
+[step 50] Applying push: 0.0 N at angle 206.9 deg
+[step 70] Applying push: 0.0 N at angle 299.8 deg
+[step 90] Applying push: 0.0 N at angle 69.8 deg
+[step 110] Applying push: 0.0 N at angle 237.6 deg
+[step 130] Applying push: 0.0 N at angle 165.5 deg
+[step 150] Applying push: 0.0 N at angle 306.1 deg
+[step 170] Applying push: 0.0 N at angle 341.9 deg
+[step 190] Applying push: 0.0 N at angle 72.0 deg
+[step 210] Applying push: 0.0 N at angle 355.5 deg
+[step 230] Applying push: 0.0 N at angle 223.9 deg
+Episode 1 over! Fell: False
+[step 250] Applying push: 0.0 N at angle 330.2 deg
+[step 270] Applying push: 0.0 N at angle 330.4 deg
+[step 290] Applying push: 0.0 N at angle 265.1 deg
+[step 310] Applying push: 0.0 N at angle 37.2 deg
+[step 330] Applying push: 0.0 N at angle 270.2 deg
+[step 350] Applying push: 0.0 N at angle 13.7 deg
+[step 370] Applying push: 0.0 N at angle 37.2 deg
+[step 390] Applying push: 0.0 N at angle 33.9 deg
+[step 410] Applying push: 0.0 N at angle 247.9 deg
+[step 430] Applying push: 0.0 N at angle 49.4 deg
+[step 450] Applying push: 0.0 N at angle 234.9 deg
+[step 470] Applying push: 0.0 N at angle 207.1 deg
+[step 490] Applying push: 0.0 N at angle 205.6 deg
+Episode 2 over! Fell: False
+[step 500] Applying push: 0.0 N at angle 252.1 deg
+[step 520] Applying push: 0.0 N at angle 208.6 deg
+[step 540] Applying push: 0.0 N at angle 105.8 deg
+[step 560] Applying push: 0.0 N at angle 84.2 deg
+[step 580] Applying push: 0.0 N at angle 111.3 deg
+[step 600] Applying push: 0.0 N at angle 212.0 deg
+[step 620] Applying push: 0.0 N at angle 286.2 deg
+[step 640] Applying push: 0.0 N at angle 18.2 deg
+[step 660] Applying push: 0.0 N at angle 344.2 deg
+[step 680] Applying push: 0.0 N at angle 17.8 deg
+[step 700] Applying push: 0.0 N at angle 325.5 deg
+[step 720] Applying push: 0.0 N at angle 288.9 deg
+[step 740] Applying push: 0.0 N at angle 121.4 deg
+Episode 3 over! Fell: False
+[step 750] Applying push: 0.0 N at angle 271.4 deg
+[step 770] Applying push: 0.0 N at angle 55.5 deg
+[step 790] Applying push: 0.0 N at angle 77.8 deg
+[step 810] Applying push: 0.0 N at angle 143.7 deg
+[step 830] Applying push: 0.0 N at angle 187.4 deg
+[step 850] Applying push: 0.0 N at angle 229.7 deg
+[step 870] Applying push: 0.0 N at angle 186.0 deg
+[step 890] Applying push: 0.0 N at angle 19.3 deg
+[step 910] Applying push: 0.0 N at angle 61.0 deg
+[step 930] Applying push: 0.0 N at angle 88.6 deg
+[step 950] Applying push: 0.0 N at angle 176.0 deg
+[step 970] Applying push: 0.0 N at angle 123.9 deg
+[step 990] Applying push: 0.0 N at angle 310.3 deg
+Episode 4 over! Fell: False
+[step 1000] Applying push: 0.0 N at angle 136.8 deg
+[step 1020] Applying push: 0.0 N at angle 109.1 deg
+[step 1040] Applying push: 0.0 N at angle 202.5 deg
+[step 1060] Applying push: 0.0 N at angle 138.8 deg
+[step 1080] Applying push: 0.0 N at angle 92.9 deg
+[step 1100] Applying push: 0.0 N at angle 158.7 deg
+[step 1120] Applying push: 0.0 N at angle 123.7 deg
+[step 1140] Applying push: 0.0 N at angle 173.9 deg
+[step 1160] Applying push: 0.0 N at angle 196.4 deg
+[step 1180] Applying push: 0.0 N at angle 263.1 deg
+[step 1200] Applying push: 0.0 N at angle 118.1 deg
+[step 1220] Applying push: 0.0 N at angle 287.3 deg
+[step 1240] Applying push: 0.0 N at angle 142.8 deg
+Episode 5 over! Fell: False
+[step 1250] Applying push: 0.0 N at angle 357.3 deg
+[step 1270] Applying push: 0.0 N at angle 156.0 deg
+[step 1290] Applying push: 0.0 N at angle 330.0 deg
+[step 1310] Applying push: 0.0 N at angle 138.2 deg
+[step 1330] Applying push: 0.0 N at angle 200.4 deg
+[step 1350] Applying push: 0.0 N at angle 282.1 deg
+[step 1370] Applying push: 0.0 N at angle 85.4 deg
+[step 1390] Applying push: 0.0 N at angle 312.7 deg
+[step 1410] Applying push: 0.0 N at angle 214.2 deg
+[step 1430] Applying push: 0.0 N at angle 141.3 deg
+[step 1450] Applying push: 0.0 N at angle 63.3 deg
+[step 1470] Applying push: 0.0 N at angle 95.8 deg
+[step 1490] Applying push: 0.0 N at angle 142.2 deg
+Episode 6 over! Fell: False
+[step 1500] Applying push: 0.0 N at angle 155.7 deg
+[step 1520] Applying push: 0.0 N at angle 254.1 deg
+[step 1540] Applying push: 0.0 N at angle 329.3 deg
+[step 1560] Applying push: 0.0 N at angle 350.3 deg
+[step 1580] Applying push: 0.0 N at angle 105.8 deg
+[step 1600] Applying push: 0.0 N at angle 69.0 deg
+[step 1620] Applying push: 0.0 N at angle 204.9 deg
+[step 1640] Applying push: 0.0 N at angle 275.9 deg
+[step 1660] Applying push: 0.0 N at angle 77.8 deg
+[step 1680] Applying push: 0.0 N at angle 84.1 deg
+[step 1700] Applying push: 0.0 N at angle 336.0 deg
+[step 1720] Applying push: 0.0 N at angle 282.8 deg
+[step 1740] Applying push: 0.0 N at angle 322.2 deg
+Episode 7 over! Fell: False
+[step 1750] Applying push: 0.0 N at angle 82.2 deg
+[step 1770] Applying push: 0.0 N at angle 284.7 deg
+[step 1790] Applying push: 0.0 N at angle 359.2 deg
+[step 1810] Applying push: 0.0 N at angle 227.0 deg
+[step 1830] Applying push: 0.0 N at angle 266.0 deg
+[step 1850] Applying push: 0.0 N at angle 117.6 deg
+[step 1870] Applying push: 0.0 N at angle 129.2 deg
+[step 1890] Applying push: 0.0 N at angle 94.7 deg
+[step 1910] Applying push: 0.0 N at angle 46.3 deg
+[step 1930] Applying push: 0.0 N at angle 312.4 deg
+[step 1950] Applying push: 0.0 N at angle 155.4 deg
+[step 1970] Applying push: 0.0 N at angle 62.6 deg
+[step 1990] Applying push: 0.0 N at angle 206.0 deg
+Episode 8 over! Fell: False
+[step 2000] Applying push: 0.0 N at angle 147.2 deg
+[step 2020] Applying push: 0.0 N at angle 351.1 deg
+[step 2040] Applying push: 0.0 N at angle 159.2 deg
+[step 2060] Applying push: 0.0 N at angle 94.3 deg
+[step 2080] Applying push: 0.0 N at angle 346.2 deg
+[step 2100] Applying push: 0.0 N at angle 9.9 deg
+[step 2120] Applying push: 0.0 N at angle 186.1 deg
+[step 2140] Applying push: 0.0 N at angle 30.8 deg
+[step 2160] Applying push: 0.0 N at angle 251.3 deg
+[step 2180] Applying push: 0.0 N at angle 30.8 deg
+[step 2200] Applying push: 0.0 N at angle 52.3 deg
+[step 2220] Applying push: 0.0 N at angle 298.6 deg
+[step 2240] Applying push: 0.0 N at angle 121.9 deg
+Episode 9 over! Fell: False
+[step 2250] Applying push: 0.0 N at angle 154.3 deg
+[step 2270] Applying push: 0.0 N at angle 323.5 deg
+[step 2290] Applying push: 0.0 N at angle 179.4 deg
+[step 2310] Applying push: 0.0 N at angle 236.4 deg
+[step 2330] Applying push: 0.0 N at angle 218.9 deg
+[step 2350] Applying push: 0.0 N at angle 44.1 deg
+[step 2370] Applying push: 0.0 N at angle 204.0 deg
+[step 2390] Applying push: 0.0 N at angle 85.6 deg
+[step 2410] Applying push: 0.0 N at angle 221.2 deg
+[step 2430] Applying push: 0.0 N at angle 161.7 deg
+[step 2450] Applying push: 0.0 N at angle 341.0 deg
+[step 2470] Applying push: 0.0 N at angle 265.1 deg
+[step 2490] Applying push: 0.0 N at angle 2.7 deg
+Episode 10 over! Fell: False
+[step 2500] Applying push: 0.0 N at angle 2.4 deg
+[step 2520] Applying push: 0.0 N at angle 358.6 deg
+[step 2540] Applying push: 0.0 N at angle 157.6 deg
+[step 2560] Applying push: 0.0 N at angle 336.3 deg
+[step 2580] Applying push: 0.0 N at angle 333.9 deg
+[step 2600] Applying push: 0.0 N at angle 328.2 deg
+[step 2620] Applying push: 0.0 N at angle 97.3 deg
+[step 2640] Applying push: 0.0 N at angle 15.4 deg
+[step 2660] Applying push: 0.0 N at angle 121.0 deg
+[step 2680] Applying push: 0.0 N at angle 306.4 deg
+[step 2700] Applying push: 0.0 N at angle 307.5 deg
+[step 2720] Applying push: 0.0 N at angle 312.3 deg
+[step 2740] Applying push: 0.0 N at angle 174.0 deg
+Episode 11 over! Fell: False
+[step 2750] Applying push: 0.0 N at angle 312.4 deg
+[step 2770] Applying push: 0.0 N at angle 40.0 deg
+[step 2790] Applying push: 0.0 N at angle 102.9 deg
+[step 2810] Applying push: 0.0 N at angle 360.0 deg
+[step 2830] Applying push: 0.0 N at angle 34.6 deg
+[step 2850] Applying push: 0.0 N at angle 208.9 deg
+[step 2870] Applying push: 0.0 N at angle 11.9 deg
+[step 2890] Applying push: 0.0 N at angle 43.8 deg
+[step 2910] Applying push: 0.0 N at angle 20.0 deg
+[step 2930] Applying push: 0.0 N at angle 228.6 deg
+[step 2950] Applying push: 0.0 N at angle 103.1 deg
+[step 2970] Applying push: 0.0 N at angle 315.9 deg
+[step 2990] Applying push: 0.0 N at angle 336.9 deg
+Episode 12 over! Fell: False
+[step 3000] Applying push: 0.0 N at angle 184.4 deg
+[step 3020] Applying push: 0.0 N at angle 210.9 deg
+[step 3040] Applying push: 0.0 N at angle 346.7 deg
+[step 3060] Applying push: 0.0 N at angle 64.0 deg
+[step 3080] Applying push: 0.0 N at angle 297.9 deg
+[step 3100] Applying push: 0.0 N at angle 119.6 deg
+[step 3120] Applying push: 0.0 N at angle 232.5 deg
+[step 3140] Applying push: 0.0 N at angle 69.0 deg
+[step 3160] Applying push: 0.0 N at angle 350.0 deg
+[step 3180] Applying push: 0.0 N at angle 3.4 deg
+[step 3200] Applying push: 0.0 N at angle 48.8 deg
+[step 3220] Applying push: 0.0 N at angle 321.3 deg
+[step 3240] Applying push: 0.0 N at angle 127.7 deg
+Episode 13 over! Fell: False
+[step 3250] Applying push: 0.0 N at angle 354.9 deg
+[step 3270] Applying push: 0.0 N at angle 17.9 deg
+[step 3290] Applying push: 0.0 N at angle 39.5 deg
+[step 3310] Applying push: 0.0 N at angle 243.4 deg
+[step 3330] Applying push: 0.0 N at angle 343.5 deg
+[step 3350] Applying push: 0.0 N at angle 331.9 deg
+[step 3370] Applying push: 0.0 N at angle 29.6 deg
+[step 3390] Applying push: 0.0 N at angle 358.3 deg
+[step 3410] Applying push: 0.0 N at angle 282.8 deg
+[step 3430] Applying push: 0.0 N at angle 269.5 deg
+[step 3450] Applying push: 0.0 N at angle 29.2 deg
+[step 3470] Applying push: 0.0 N at angle 194.5 deg
+[step 3490] Applying push: 0.0 N at angle 59.7 deg
+Episode 14 over! Fell: False
+[step 3500] Applying push: 0.0 N at angle 107.4 deg
+[step 3520] Applying push: 0.0 N at angle 27.3 deg
+[step 3540] Applying push: 0.0 N at angle 250.8 deg
+[step 3560] Applying push: 0.0 N at angle 97.7 deg
+[step 3580] Applying push: 0.0 N at angle 204.4 deg
+[step 3600] Applying push: 0.0 N at angle 332.3 deg
+[step 3620] Applying push: 0.0 N at angle 112.8 deg
+[step 3640] Applying push: 0.0 N at angle 230.7 deg
+[step 3660] Applying push: 0.0 N at angle 30.0 deg
+[step 3680] Applying push: 0.0 N at angle 26.9 deg
+[step 3700] Applying push: 0.0 N at angle 106.3 deg
+[step 3720] Applying push: 0.0 N at angle 194.2 deg
+[step 3740] Applying push: 0.0 N at angle 122.8 deg
+Episode 15 over! Fell: False
+[step 3750] Applying push: 0.0 N at angle 303.3 deg
+[step 3770] Applying push: 0.0 N at angle 254.6 deg
+[step 3790] Applying push: 0.0 N at angle 34.7 deg
+[step 3810] Applying push: 0.0 N at angle 146.7 deg
+[step 3830] Applying push: 0.0 N at angle 140.5 deg
+[step 3850] Applying push: 0.0 N at angle 58.7 deg
+[step 3870] Applying push: 0.0 N at angle 219.3 deg
+[step 3890] Applying push: 0.0 N at angle 320.0 deg
+[step 3910] Applying push: 0.0 N at angle 301.6 deg
+[step 3930] Applying push: 0.0 N at angle 188.2 deg
+[step 3950] Applying push: 0.0 N at angle 160.6 deg
+[step 3970] Applying push: 0.0 N at angle 14.4 deg
+[step 3990] Applying push: 0.0 N at angle 260.1 deg
+Episode 16 over! Fell: False
+[step 4000] Applying push: 0.0 N at angle 188.1 deg
+[step 4020] Applying push: 0.0 N at angle 41.2 deg
+[step 4040] Applying push: 0.0 N at angle 217.4 deg
+[step 4060] Applying push: 0.0 N at angle 293.6 deg
+[step 4080] Applying push: 0.0 N at angle 207.4 deg
+[step 4100] Applying push: 0.0 N at angle 343.2 deg
+[step 4120] Applying push: 0.0 N at angle 107.7 deg
+[step 4140] Applying push: 0.0 N at angle 245.3 deg
+[step 4160] Applying push: 0.0 N at angle 134.8 deg
+[step 4180] Applying push: 0.0 N at angle 65.6 deg
+[step 4200] Applying push: 0.0 N at angle 156.3 deg
+[step 4220] Applying push: 0.0 N at angle 61.1 deg
+[step 4240] Applying push: 0.0 N at angle 235.5 deg
+Episode 17 over! Fell: False
+[step 4250] Applying push: 0.0 N at angle 287.6 deg
+[step 4270] Applying push: 0.0 N at angle 78.1 deg
+[step 4290] Applying push: 0.0 N at angle 279.2 deg
+[step 4310] Applying push: 0.0 N at angle 73.3 deg
+[step 4330] Applying push: 0.0 N at angle 236.5 deg
+[step 4350] Applying push: 0.0 N at angle 40.8 deg
+[step 4370] Applying push: 0.0 N at angle 7.4 deg
+[step 4390] Applying push: 0.0 N at angle 277.4 deg
+[step 4410] Applying push: 0.0 N at angle 199.3 deg
+[step 4430] Applying push: 0.0 N at angle 59.0 deg
+[step 4450] Applying push: 0.0 N at angle 96.2 deg
+[step 4470] Applying push: 0.0 N at angle 171.9 deg
+[step 4490] Applying push: 0.0 N at angle 237.8 deg
+Episode 18 over! Fell: False
+[step 4500] Applying push: 0.0 N at angle 46.4 deg
+[step 4520] Applying push: 0.0 N at angle 107.8 deg
+[step 4540] Applying push: 0.0 N at angle 341.2 deg
+[step 4560] Applying push: 0.0 N at angle 147.5 deg
+[step 4580] Applying push: 0.0 N at angle 214.9 deg
+[step 4600] Applying push: 0.0 N at angle 207.6 deg
+[step 4620] Applying push: 0.0 N at angle 175.1 deg
+[step 4640] Applying push: 0.0 N at angle 266.8 deg
+[step 4660] Applying push: 0.0 N at angle 311.1 deg
+[step 4680] Applying push: 0.0 N at angle 61.4 deg
+[step 4700] Applying push: 0.0 N at angle 247.2 deg
+[step 4720] Applying push: 0.0 N at angle 54.2 deg
+[step 4740] Applying push: 0.0 N at angle 17.0 deg
+Episode 19 over! Fell: False
+[step 4750] Applying push: 0.0 N at angle 14.6 deg
+[step 4770] Applying push: 0.0 N at angle 157.8 deg
+[step 4790] Applying push: 0.0 N at angle 92.9 deg
+[step 4810] Applying push: 0.0 N at angle 11.1 deg
+[step 4830] Applying push: 0.0 N at angle 30.8 deg
+[step 4850] Applying push: 0.0 N at angle 222.8 deg
+[step 4870] Applying push: 0.0 N at angle 85.4 deg
+[step 4890] Applying push: 0.0 N at angle 304.2 deg
+[step 4910] Applying push: 0.0 N at angle 7.8 deg
+[step 4930] Applying push: 0.0 N at angle 79.9 deg
+[step 4950] Applying push: 0.0 N at angle 121.9 deg
+[step 4970] Applying push: 0.0 N at angle 125.0 deg
+[step 4990] Applying push: 0.0 N at angle 71.2 deg
+Episode 20 over! Fell: False
+===============
+Unified on flat terrain under perturbation
+===============
+Push force (N):  0.0
+Push interval (steps):  10
+Push duration (steps):  10
+Number of episodes:  20
+Fall count:  0
+Fall rate:  0.0
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Per episode reward:  [9.03721246495843, 9.182540601119399, 8.130023206584156, 8.981955415103585, 8.934478511568159, 9.182940776459873, 9.145875507965684, 9.218530889134854, 8.075914768269286, 9.116989493835717, 8.500863356515765, 8.439236285164952, 9.024701713118702, 9.138039691839367, 8.60695680550998, 8.992162629961967, 8.042133917333558, 9.151772133540362, 9.092042558826506, 9.237589280121028]
+Average reward:  8.861598000346566
+Total reward:  177.23196000693133 
+

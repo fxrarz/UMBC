@@ -1,0 +1,77 @@
+$ python3 scripts/ulbc_v2/3.test/stairway_policy_comparison.py --policy_type one_hot
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Loading weights for one_hot from: scripts/ulbc_v2/logs/models/1hot.pth
+Terrain ID: 1
+Current Target Forward Velocity: 0.9089892506599426 m/s
+8.410472578601912
+Episode 1 over!
+Current Target Forward Velocity: 0.6638607382774353 m/s
+7.908683498390019
+Episode 2 over!
+Current Target Forward Velocity: 0.9826055765151978 m/s
+7.978125755675137
+Episode 3 over!
+Current Target Forward Velocity: 0.5623725056648254 m/s
+9.04658348672092
+Episode 4 over!
+Current Target Forward Velocity: 0.6175287961959839 m/s
+8.752881818916649
+Episode 5 over!
+Current Target Forward Velocity: 0.7478300929069519 m/s
+8.664608914405107
+Episode 6 over!
+Current Target Forward Velocity: 0.5418000221252441 m/s
+8.807352690026164
+Episode 7 over!
+Current Target Forward Velocity: 0.8294696807861328 m/s
+8.326763667631894
+Episode 8 over!
+Current Target Forward Velocity: 0.656032919883728 m/s
+8.798960882239044
+Episode 9 over!
+Current Target Forward Velocity: 0.5702184438705444 m/s
+8.526734778657556
+Episode 10 over!
+Current Target Forward Velocity: 0.5653754472732544 m/s
+8.756603357382119
+Episode 11 over!
+Current Target Forward Velocity: 0.9111328125 m/s
+8.52490132395178
+Episode 12 over!
+Current Target Forward Velocity: 0.8464829921722412 m/s
+8.289593110326678
+Episode 13 over!
+Current Target Forward Velocity: 0.8200912475585938 m/s
+8.3827551221475
+Episode 14 over!
+Current Target Forward Velocity: 0.9568358063697815 m/s
+8.612622242653742
+Episode 15 over!
+Current Target Forward Velocity: 0.7565818428993225 m/s
+8.255926943384111
+Episode 16 over!
+Current Target Forward Velocity: 0.805508553981781 m/s
+8.539804292842746
+Episode 17 over!
+Current Target Forward Velocity: 0.8720830678939819 m/s
+8.51727355539333
+Episode 18 over!
+Current Target Forward Velocity: 0.537628173828125 m/s
+8.259164422750473
+Episode 19 over!
+Current Target Forward Velocity: 0.7838524580001831 m/s
+8.321935814339668
+Episode 20 over!
+===============
+Stairway Terrain - Policy: one_hot
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Number of episode:  20
+Per episode reward:  [8.410472578601912, 7.908683498390019, 7.978125755675137, 9.04658348672092, 8.752881818916649, 8.664608914405107, 8.807352690026164, 8.326763667631894, 8.798960882239044, 8.526734778657556, 8.756603357382119, 8.52490132395178, 8.289593110326678, 8.3827551221475, 8.612622242653742, 8.255926943384111, 8.539804292842746, 8.51727355539333, 8.259164422750473, 8.321935814339668]
+Average reward:  8.484087412821827
+Total reward:  169.68174825643655 
+

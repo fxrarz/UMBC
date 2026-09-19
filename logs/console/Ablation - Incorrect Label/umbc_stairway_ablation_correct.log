@@ -1,0 +1,79 @@
+$ python3 scripts/ulbc_v2/3.test/umbc_stairway_ablation.py
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+root height right after reset: 3.0703001022338867
+Using default correct terrain ID from mapping: 1
+Current Target Forward Velocity: 0.6060359477996826 m/s
+8.735665306448936
+Episode 1 over! Fell: False
+Current Target Forward Velocity: 0.8137496709823608 m/s
+8.46727035054937
+Episode 2 over! Fell: False
+Current Target Forward Velocity: 0.8897208571434021 m/s
+8.506891739089042
+Episode 3 over! Fell: False
+Current Target Forward Velocity: 0.5861350893974304 m/s
+8.886220490559936
+Episode 4 over! Fell: False
+Current Target Forward Velocity: 0.6433957815170288 m/s
+8.673738782294095
+Episode 5 over! Fell: False
+Current Target Forward Velocity: 0.8359950184822083 m/s
+8.815932566300035
+Episode 6 over! Fell: False
+Current Target Forward Velocity: 0.7028851509094238 m/s
+8.615370589774102
+Episode 7 over! Fell: False
+Current Target Forward Velocity: 0.8337569236755371 m/s
+8.854936974530574
+Episode 8 over! Fell: False
+Current Target Forward Velocity: 0.7602508068084717 m/s
+8.995436305645853
+Episode 9 over! Fell: False
+Current Target Forward Velocity: 0.9915866851806641 m/s
+8.144555933307856
+Episode 10 over! Fell: False
+Current Target Forward Velocity: 0.7169477939605713 m/s
+8.643730551935732
+Episode 11 over! Fell: False
+Current Target Forward Velocity: 0.5107850432395935 m/s
+8.976018694229424
+Episode 12 over! Fell: False
+Current Target Forward Velocity: 0.9042905569076538 m/s
+8.436236034147441
+Episode 13 over! Fell: False
+Current Target Forward Velocity: 0.5796814560890198 m/s
+8.764055446721613
+Episode 14 over! Fell: False
+Current Target Forward Velocity: 0.9493120312690735 m/s
+7.997201082995161
+Episode 15 over! Fell: False
+Current Target Forward Velocity: 0.557888925075531 m/s
+9.110220757313073
+Episode 16 over! Fell: False
+Current Target Forward Velocity: 0.8137434720993042 m/s
+8.627078668767354
+Episode 17 over! Fell: False
+Current Target Forward Velocity: 0.9793487787246704 m/s
+8.587298236292554
+Episode 18 over! Fell: False
+Current Target Forward Velocity: 0.851536750793457 m/s
+8.587870082817972
+Episode 19 over! Fell: False
+Current Target Forward Velocity: 0.9376963376998901 m/s
+8.586233111098409
+Episode 20 over! Fell: False
+===============
+UMBC on stairway terrain (Terrain ID: 1)
+===============
+Number of episodes:  20
+Fall count:  0
+Fall rate:  0.0
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Per episode reward:  [8.735665306448936, 8.46727035054937, 8.506891739089042, 8.886220490559936, 8.673738782294095, 8.815932566300035, 8.615370589774102, 8.854936974530574, 8.995436305645853, 8.144555933307856, 8.643730551935732, 8.976018694229424, 8.436236034147441, 8.764055446721613, 7.997201082995161, 9.110220757313073, 8.627078668767354, 8.587298236292554, 8.587870082817972, 8.586233111098409]
+Average reward:  8.650598085240926
+Total reward:  173.01196170481853 
+

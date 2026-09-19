@@ -38,7 +38,7 @@ IsaacLab/
 └── scripts/
     └── UMBC/
         ├── 1.data_collection/
-        ├── 2.unified_policy/
+        ├── 2.train/
         ├── 3.test/
         └── ...
 ```

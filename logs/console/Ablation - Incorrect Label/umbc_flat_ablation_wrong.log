@@ -1,0 +1,38 @@
+$ python3 scripts/ulbc_v2/3.test/umbc_flat_ablation.py --terrain_id 1
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Using command-line terrain ID override (Ablation Mode): 1
+Episode 1 over! Fell: False
+Episode 2 over! Fell: False
+Episode 3 over! Fell: False
+Episode 4 over! Fell: False
+Episode 5 over! Fell: True
+Episode 6 over! Fell: False
+Episode 7 over! Fell: False
+Episode 8 over! Fell: True
+Episode 9 over! Fell: False
+Episode 10 over! Fell: False
+Episode 11 over! Fell: False
+Episode 12 over! Fell: False
+Episode 13 over! Fell: True
+Episode 14 over! Fell: True
+Episode 15 over! Fell: False
+Episode 16 over! Fell: True
+Episode 17 over! Fell: False
+Episode 18 over! Fell: True
+Episode 19 over! Fell: False
+Episode 20 over! Fell: False
+===============
+UMBC on flat terrain (Terrain ID: 1)
+===============
+Number of episodes:  20
+Fall count:  6
+Fall rate:  0.3
+Length of episode:  [249, 249, 249, 249, 219, 249, 249, 121, 249, 249, 249, 249, 105, 124, 249, 106, 249, 104, 249, 249]
+Average length of episode:  213.25
+Per episode reward:  [7.9171001319773495, 7.817120254971087, 8.000068683177233, 7.503687109332532, 0.9474611523328349, 7.641139720159117, 7.939084627665579, 0.4507739414984826, 7.869958478491753, 7.541703102644533, 7.761670856270939, 7.498201820068061, 0.5002707242238102, 0.8099615570390597, 4.404873344814405, 0.32985089215799235, 7.3040425449144095, 0.9864257939625531, 8.176774935447611, 7.956235057674348]
+Average reward:  5.4678202364411845
+Total reward:  109.35640472882369 
+

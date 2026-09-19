@@ -1,0 +1,76 @@
+$ python3 scripts/ulbc_v2/3.test/flat_policy_comparison.py --policy_type umbc
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Using cuda device
+Loading weights for umbc from: scripts/ulbc_v2/logs/models/umbc.pth
+Terrain ID: 0
+Current Target Forward Velocity: 0.5871945023536682 m/s
+9.176817429251969
+Episode 1 over!
+Current Target Forward Velocity: 0.6094643473625183 m/s
+9.261470347642899
+Episode 2 over!
+Current Target Forward Velocity: 0.9486322999000549 m/s
+8.183943762211129
+Episode 3 over!
+Current Target Forward Velocity: 0.96125727891922 m/s
+8.311571952421218
+Episode 4 over!
+Current Target Forward Velocity: 0.6758379936218262 m/s
+9.011946776881814
+Episode 5 over!
+Current Target Forward Velocity: 0.5410977005958557 m/s
+8.887981553561985
+Episode 6 over!
+Current Target Forward Velocity: 0.7004132270812988 m/s
+9.104455226100981
+Episode 7 over!
+Current Target Forward Velocity: 0.5913460850715637 m/s
+9.253649083897471
+Episode 8 over!
+Current Target Forward Velocity: 0.7152339816093445 m/s
+9.129768745973706
+Episode 9 over!
+Current Target Forward Velocity: 0.9128268361091614 m/s
+8.028280562255532
+Episode 10 over!
+Current Target Forward Velocity: 0.6566733121871948 m/s
+9.1315858643502
+Episode 11 over!
+Current Target Forward Velocity: 0.9321248531341553 m/s
+8.100079418625683
+Episode 12 over!
+Current Target Forward Velocity: 0.6015916466712952 m/s
+8.899949106387794
+Episode 13 over!
+Current Target Forward Velocity: 0.5805748701095581 m/s
+9.050204124185257
+Episode 14 over!
+Current Target Forward Velocity: 0.9408470392227173 m/s
+8.652363719418645
+Episode 15 over!
+Current Target Forward Velocity: 0.7573342323303223 m/s
+9.14600794762373
+Episode 16 over!
+Current Target Forward Velocity: 0.8562066555023193 m/s
+8.516153346281499
+Episode 17 over!
+Current Target Forward Velocity: 0.6084573268890381 m/s
+8.855162652209401
+Episode 18 over!
+Current Target Forward Velocity: 0.7867201566696167 m/s
+9.00701897451654
+Episode 19 over!
+Current Target Forward Velocity: 0.7046967148780823 m/s
+9.059908870607615
+Episode 20 over!
+===============
+Unified on flat terrain - Policy: umbc
+===============
+Length of episode:  [249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249, 249]
+Average length of episode:  249.0
+Number of episode:  20
+Per episode reward:  [9.176817429251969, 9.261470347642899, 8.183943762211129, 8.311571952421218, 9.011946776881814, 8.887981553561985, 9.104455226100981, 9.253649083897471, 9.129768745973706, 8.028280562255532, 9.1315858643502, 8.100079418625683, 8.899949106387794, 9.050204124185257, 8.652363719418645, 9.14600794762373, 8.516153346281499, 8.855162652209401, 9.00701897451654, 9.059908870607615]
+Average reward:  8.838415973220254
+Total reward:  176.76831946440507 

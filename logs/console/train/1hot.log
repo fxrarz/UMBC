@@ -1,0 +1,58 @@
+$ python3 scripts/ulbc_v2/2.train/1hot.py 
+Using device: cuda
+           count   mean  std    min    25%    50%    75%    max
+terrain                                                        
+flat      2000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+stairway  4000.0  250.0  0.0  250.0  250.0  250.0  250.0  250.0
+Train trajectories: 5400 | Test trajectories: 600
+Terrain mapping: {'flat': 0, 'stairway': 1}
+Starting training for up to 60 epochs (early stopping patience=8)...
+Epoch 1/60 | Train Loss: 0.001829 | Val Loss: 0.000862 | Val MAE: 0.027484 | Val RMSE: 0.041510
+   >> [DIAGNOSTIC] flat: 0.000411 | stairway: 0.001087
+Epoch 2/60 | Train Loss: 0.001169 | Val Loss: 0.000676 | Val MAE: 0.025052 | Val RMSE: 0.036760
+   >> [DIAGNOSTIC] flat: 0.000300 | stairway: 0.000863
+Epoch 3/60 | Train Loss: 0.001028 | Val Loss: 0.000769 | Val MAE: 0.026772 | Val RMSE: 0.039229
+   >> [DIAGNOSTIC] flat: 0.000377 | stairway: 0.000965
+Epoch 4/60 | Train Loss: 0.000975 | Val Loss: 0.000774 | Val MAE: 0.026964 | Val RMSE: 0.039337
+   >> [DIAGNOSTIC] flat: 0.000362 | stairway: 0.000980
+Epoch 5/60 | Train Loss: 0.000934 | Val Loss: 0.000832 | Val MAE: 0.025997 | Val RMSE: 0.040794
+   >> [DIAGNOSTIC] flat: 0.000692 | stairway: 0.000902
+Epoch 6/60 | Train Loss: 0.000902 | Val Loss: 0.000675 | Val MAE: 0.025426 | Val RMSE: 0.036745
+   >> [DIAGNOSTIC] flat: 0.000301 | stairway: 0.000862
+Epoch 7/60 | Train Loss: 0.000901 | Val Loss: 0.000731 | Val MAE: 0.026326 | Val RMSE: 0.038246
+   >> [DIAGNOSTIC] flat: 0.000363 | stairway: 0.000915
+Epoch 8/60 | Train Loss: 0.000890 | Val Loss: 0.000702 | Val MAE: 0.025663 | Val RMSE: 0.037465
+   >> [DIAGNOSTIC] flat: 0.000374 | stairway: 0.000866
+Epoch 9/60 | Train Loss: 0.000890 | Val Loss: 0.000734 | Val MAE: 0.026253 | Val RMSE: 0.038310
+   >> [DIAGNOSTIC] flat: 0.000395 | stairway: 0.000903
+Epoch 10/60 | Train Loss: 0.000870 | Val Loss: 0.000685 | Val MAE: 0.025046 | Val RMSE: 0.037027
+   >> [DIAGNOSTIC] flat: 0.000380 | stairway: 0.000838
+Early stopping at epoch 10 (no improvement for 8 epochs). Best val loss: 0.000676
+============================================================
+FINAL TEST SET (best checkpoint) — Overall MAE: 0.025052 | Overall RMSE: 0.036760
+   motor_1     MAE: 0.015322   RMSE: 0.020872
+   motor_2     MAE: 0.013272   RMSE: 0.018692
+   motor_3     MAE: 0.020058   RMSE: 0.026233
+   motor_4     MAE: 0.021976   RMSE: 0.029709
+   motor_5     MAE: 0.019990   RMSE: 0.027885
+   motor_6     MAE: 0.023084   RMSE: 0.032695
+   motor_7     MAE: 0.024222   RMSE: 0.034432
+   motor_8     MAE: 0.025782   RMSE: 0.034615
+   motor_9     MAE: 0.021897   RMSE: 0.030816
+   motor_10    MAE: 0.022725   RMSE: 0.032731
+   motor_11    MAE: 0.024708   RMSE: 0.034480
+   motor_12    MAE: 0.032034   RMSE: 0.044289
+   motor_13    MAE: 0.034969   RMSE: 0.048733
+   motor_14    MAE: 0.022817   RMSE: 0.031978
+   motor_15    MAE: 0.023909   RMSE: 0.034086
+   motor_16    MAE: 0.046074   RMSE: 0.064703
+   motor_17    MAE: 0.038980   RMSE: 0.056829
+   motor_18    MAE: 0.023341   RMSE: 0.032673
+   motor_19    MAE: 0.020830   RMSE: 0.029558
+   [flat]  MAE: 0.017246   RMSE: 0.024509   (n=50000)
+   [stairway]  MAE: 0.028955   RMSE: 0.041552   (n=100000)
+============================================================
+Saved training history to ./scripts/ulbc_v2/logs/metrics/1hot_history.pkl
+training_time_sec:  138.13667058944702
+Final Validation Loss: 0.000685 | Final MAE: 0.025052 | Final RMSE: 0.036760
+
