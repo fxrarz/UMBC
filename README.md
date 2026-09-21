@@ -1,5 +1,7 @@
 # A Semantic-Conditioned Multi-Modal Behavior Cloning Framework for Terrain-Specific Behavior Isolation in Humanoid Locomotion
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22844992-blue)](https://doi.org/10.5281/zenodo.22844992)
+
 <p align="center">
   <img src="logs/images/1.umbc_framework.png" alt="UMBC Framework - Graphical Abstract" width="100%">
 </p>
